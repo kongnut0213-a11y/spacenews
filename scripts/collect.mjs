@@ -7,6 +7,8 @@
 import { XMLParser } from "fast-xml-parser";
 import fs from "node:fs/promises";
 import { calc } from "./satcat-calc.mjs";
+import { pre, HG } from "./text-prep.mjs";
+import { translateAll } from "./translate.mjs";
 
 const ROOT = new URL("../", import.meta.url);
 const OUT = new URL("data/", ROOT);
@@ -16,7 +18,7 @@ const DAYS = 8;          // 대시보드는 7일 기준, 경계 여유 1일
 const PER_FEED = 30;     // 피드당 최대 기사 수
 const SATCAT_EVERY = 20 * 36e5; // SATCAT은 20시간에 한 번만 (CelesTrak 요청 제한 대비)
 const now = Date.now();
-const status = { at: now, feeds: [], launches: null, satcat: null };
+const status = { at: now, feeds: [], translate: null, launches: null, satcat: null };
 
 async function fetchText(url, ms = 30000, accept = "*/*") {
   const ac = new AbortController();
@@ -128,7 +130,40 @@ async function collectNews() {
   }));
   // 전체 실패면 이전 파일을 지우지 않는다
   if (!Object.values(feeds).some(f => f.ok)) throw new Error("모든 피드 수집 실패");
+  await translateNews(feeds);
   await writeNews({ at: now, feeds });
+}
+
+// ---------- 번역 ----------
+// 대시보드가 번역에 쓰는 원문과 똑같이 만든다: 제목 그대로, 요약은 앞 220자에서 앞 2문장
+const descSrc = d => pre(String(d || "").trim().slice(0, 220));
+async function translateNews(feeds) {
+  try {
+    const old = await readJSON("news.json"), cache = new Map();
+    for (const f of Object.values(old?.feeds || {})) for (const i of f.items || []) if (i.kt) cache.set(i.u, i);
+    const items = Object.values(feeds).flatMap(f => f.items).filter(i => !HG.test(i.t));
+    const jobs = [];
+    let reused = 0;
+    for (const i of items) {
+      const c = cache.get(i.u);
+      if (c && c.t === i.t) { i.kt = c.kt; if (c.kd) i.kd = c.kd; reused++; continue; }
+      jobs.push({ key: "t:" + i.t, text: i.t });
+      const ds = descSrc(i.d);
+      if (ds) jobs.push({ key: "d:" + ds, text: ds });
+    }
+    const { map, stat } = await translateAll(jobs);
+    for (const i of items) {
+      if (i.kt) continue;
+      const kt = map.get("t:" + i.t);
+      if (!kt) continue;
+      i.kt = kt;
+      const kd = map.get("d:" + descSrc(i.d));
+      if (kd) i.kd = kd;
+    }
+    status.translate = { ok: 1, reused, ...stat };
+  } catch (e) {
+    status.translate = { ok: 0, err: e.message }; // 번역 실패해도 기사 저장은 계속
+  }
 }
 
 // ---------- 발사 일정 ----------

@@ -1,0 +1,9 @@
+{
+  "name": "space-trend-dashboard",
+  "private": true,
+  "type": "module",
+  "description": "우주 동향 대시보드 데이터 수집",
+  "scripts": { "collect": "node scripts/collect.mjs" },
+  "engines": { "node": ">=20" },
+  "dependencies": { "fast-xml-parser": "^4.5.0" }
+}

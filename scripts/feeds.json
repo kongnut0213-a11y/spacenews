@@ -1,0 +1,121 @@
+[
+  {
+    "name": "미 우주군(spaceforce.mil)",
+    "url": "https://www.spaceforce.mil/DesktopModules/ArticleCS/RSS.ashx?ContentType=1&Site=1060&max=20",
+    "kind": "usf",
+    "region": "미 우주군",
+    "tz": "Z"
+  },
+  {
+    "name": "Spaceflight Now",
+    "url": "https://spaceflightnow.com/feed/",
+    "kind": "",
+    "region": "해외",
+    "tz": "Z"
+  },
+  {
+    "name": "SpaceNews",
+    "url": "https://spacenews.com/feed/",
+    "kind": "",
+    "region": "해외",
+    "tz": "Z"
+  },
+  {
+    "name": "Breaking Defense",
+    "url": "https://breakingdefense.com/feed/",
+    "kind": "mil",
+    "region": "",
+    "tz": "Z"
+  },
+  {
+    "name": "Air & Space Forces Magazine",
+    "url": "https://www.airandspaceforces.com/feed/",
+    "kind": "mil",
+    "region": "",
+    "tz": "Z"
+  },
+  {
+    "name": "Defence Industry Europe",
+    "url": "https://defence-industry.eu/feed/",
+    "kind": "mil",
+    "region": "",
+    "tz": "Z"
+  },
+  {
+    "name": "Space.com",
+    "url": "https://www.space.com/feeds/all",
+    "kind": "",
+    "region": "해외",
+    "tz": "Z"
+  },
+  {
+    "name": "뉴스스페이스",
+    "url": "https://www.newsspace.kr/rss/allArticle.xml",
+    "kind": "",
+    "region": "국내",
+    "tz": "+09:00"
+  },
+  {
+    "name": "NASASpaceflight",
+    "url": "https://www.nasaspaceflight.com/feed/",
+    "kind": "",
+    "region": "해외",
+    "tz": "Z"
+  },
+  {
+    "name": "SpacePolicyOnline",
+    "url": "https://spacepolicyonline.com/feed/",
+    "kind": "",
+    "region": "해외",
+    "tz": "Z"
+  },
+  {
+    "name": "Via Satellite",
+    "url": "https://www.satellitetoday.com/feed/",
+    "kind": "",
+    "region": "해외",
+    "tz": "Z"
+  },
+  {
+    "name": "Payload",
+    "url": "https://payloadspace.com/feed/",
+    "kind": "",
+    "region": "해외",
+    "tz": "Z"
+  },
+  {
+    "name": "European Spaceflight",
+    "url": "https://europeanspaceflight.com/feed/",
+    "kind": "",
+    "region": "해외",
+    "tz": "Z"
+  },
+  {
+    "name": "ESA",
+    "url": "https://www.esa.int/rssfeed/Our_Activities/Space_News",
+    "kind": "",
+    "region": "해외",
+    "tz": "Z"
+  },
+  {
+    "name": "DefenseScoop",
+    "url": "https://defensescoop.com/feed/",
+    "kind": "mil",
+    "region": "",
+    "tz": "Z"
+  },
+  {
+    "name": "헬로디디",
+    "url": "https://www.hellodd.com/rss/allArticle.xml",
+    "kind": "kr",
+    "region": "국내",
+    "tz": "+09:00"
+  },
+  {
+    "name": "전자신문",
+    "url": "https://rss.etnews.com/Section901.xml",
+    "kind": "kr",
+    "region": "국내",
+    "tz": "+09:00"
+  }
+]

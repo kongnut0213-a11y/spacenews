@@ -369,6 +369,11 @@ try{var r=await fetch("https://api.rss2json.com/v1/api.json?rss_url="+encodeURIC
 catch(e){var r2=await fetch("https://api.allorigins.win/raw?url="+encodeURIComponent(f[1]));var x=new DOMParser().parseFromString(await r2.text(),"text/xml");return[].map.call(x.querySelectorAll("item"),function(i){var g=function(n){var e=i.querySelector(n);return e?e.textContent:""};return{t:g("title"),d:g("description"),u:g("link"),p:g("pubDate"),im:imy(i,g("description")),cg:[].map.call(i.querySelectorAll("category"),function(c){return c.textContent}).join(" ")}})}}
 function stamp(ok){var t=localStorage.getItem("sn_t"),d=new Date();document.getElementById("dt").textContent=ok===0?"업데이트 실패":(t?"업데이트 "+t:d.getFullYear()+"."+("0"+(d.getMonth()+1)).slice(-2)+"."+("0"+d.getDate()).slice(-2)+" ("+"일월화수목금토".charAt(d.getDay())+")")}
 function sv(){try{localStorage.setItem("sn_x2",JSON.stringify(X))}catch(e){}}
+/* 화면에 보이는 해외 기사 중 번역이 없는 것을 뒤에서 미리 번역해 둔다 → 번역 버튼을 누르면 바로 표시 */
+var BGT=0,BGR=0;function bgq(ms){clearTimeout(BGT);BGT=setTimeout(bgtr,ms||1500)}
+async function bgtr(){if(BGR)return;BGR=1;try{for(var g=0;g<6;g++){var need=vis().filter(function(x){return!x.k||x.k.tv!=TV}).slice(0,12);if(!need.length)break;
+var T=await tr(need.map(function(x){return x.t}).concat(need.map(function(x){return pre(x.d)}))),got=0;
+need.forEach(function(x,i){if(T[i]!==x.t){x.k={t:gj(T[i]),d:bp(T[need.length+i]),tv:TV};got++}});if(got)sv();if(got<need.length)break}}catch(e){}finally{BGR=0}}
 function vis(){var q=lists();return q.L.concat(q.R).filter(function(x){return x.f})}
 function tl(){var v=vis();document.getElementById("tall").textContent=v.length&&v.every(function(x){return x.v&&x.k&&x.k.tv==TV})?"🌐 원문 보기":"🌐 전체 번역"}
 var SP=/space|satellite|orbit|rocket|launch|missile|counterspace|anti-satellite|kosmos|cosmos|yaogan|위성|우주|발사|궤도/i;
@@ -494,7 +499,7 @@ if(s=="R"&&(MUS.test(tx)||SEA.test(tx)||DRO.test(tx)||nsp({t:tt,d:G?"":strip(x.d
 if(d<cut(DN(s)))return;
 n[s].push({c:c,e:EM[c],t:tt,d:G?"":strip(x.d),im:(/^https?:\/\//.test(x.im||"")?x.im:""),p:K=="usf"?1:(s=="L"&&(K=="tech"||TECH.test(tx))?1:0),g:FD[i][3]||(s=="R"?rgn(tx):""),s:K=="usf"?FD[i][0]:(G&&pm?pm[1].trim()+" · Google News":FD[i][0]),dt:d,u:x.u,f:HG.test(tt)?0:1,k:(o&&o.k&&o.k.tv==TV)?o.k:(x.kt?{t:gj(x.kt),d:bp(x.kd||""),tv:TV,sv:1}:o&&o.k),v:o&&o.v,n:(Date.now()-new Date(d.replace(/\./g,"-")))<3*864e5})})});
 if(ok){X={L:mg(n.L,"L",30),R:mg(n.R,"R",30)};sv();try{localStorage.setItem("sn_t",new Date().toLocaleString("ko-KR",{month:"numeric",day:"numeric",hour:"2-digit",minute:"2-digit"})+(direct?" · 직접 수집 "+dok+"/"+FD.length+"곳":SN?" · 서버 수집 "+new Date(SN.at).toLocaleString("ko-KR",{hour:"2-digit",minute:"2-digit"}):""));if(SN)localStorage.setItem("sn_sa",SN.at)}catch(e){}}
-r();stamp(ok);sat(direct?1:0);lch(direct?2:0)}finally{b.disabled=false;UBUSY=0}}
+r();stamp(ok);bgq();sat(direct?1:0);lch(direct?2:0)}finally{b.disabled=false;UBUSY=0}}
 document.getElementById("up").onclick=function(){upd(1)};
 /* 페이지를 켜 둔 동안 30분마다, 그리고 탭으로 돌아올 때 새 서버 수집 결과를 확인 */
 var LCHK=0;async function chk(){if(Date.now()-LCHK<6e4)return;LCHK=Date.now();try{var SN=await dj("news.json",10000);if(SN&&SN.at>(+localStorage.getItem("sn_sa")||0))upd(0)}catch(e){}sat();lch(0)}
@@ -536,7 +541,7 @@ if(!i.m&&best.s>0){i.t.style.display="none";return}
 var r=best.r;i.t.setAttribute("transform","translate("+(r.x-b.x).toFixed(1)+","+(r.y-b.y).toFixed(1)+")");obs.push(r);
 var qx=Math.min(Math.max(i.px,r.x),r.x+r.w),qy=Math.min(Math.max(i.py,r.y),r.y+r.h);
 if(Math.hypot(qx-i.px,qy-i.py)>14){var l=document.createElementNS("http://www.w3.org/2000/svg","line");l.setAttribute("class","ldr");l.setAttribute("x1",i.px);l.setAttribute("y1",i.py);l.setAttribute("x2",qx.toFixed(1));l.setAttribute("y2",qy.toFixed(1));i.g.insertBefore(l,i.t)}})}
-r();stamp();sat();lch(0);(async function(){LCHK=Date.now();try{var SN=await dj("news.json",10000);if(SN&&SN.at>(+localStorage.getItem("sn_sa")||0))upd(0)}catch(e){}})();lay();if(document.fonts)document.fonts.ready.then(lay);window.addEventListener("load",lay);
+r();stamp();sat();lch(0);bgq(2500);(async function(){LCHK=Date.now();try{var SN=await dj("news.json",10000);if(SN&&SN.at>(+localStorage.getItem("sn_sa")||0))upd(0)}catch(e){}})();lay();if(document.fonts)document.fonts.ready.then(lay);window.addEventListener("load",lay);
 </script>
 </body>
 </html>

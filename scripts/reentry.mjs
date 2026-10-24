@@ -2,6 +2,7 @@
 // 출력
 //   data/reentry.json         재진입 임박 물체(CelesTrak DECAYING TLE) + 그 물체들의 SATCAT 행 + GCAT 행
 //                             + 최근 10일 동안 목록에 있었던 물체의 마지막 TLE(이미 떨어진 물체의 마지막 위치 추정용)
+//                             + 물체별 근지점·원지점 이력(최근 30일, 감쇠 추세 계산용)
 //   data/reentry-recent.json  최근 7일 안에 재진입한 물체의 SATCAT 행
 //   data/reentry-status.json  수집 결과와 실패 사유
 // 원천: CelesTrak gp.php?SPECIAL=DECAYING, CelesTrak pub/satcat.csv, GCAT satcat.tsv(하루 1회, CC-BY)
@@ -11,7 +12,16 @@ import fs from "node:fs/promises";
 const ROOT = new URL("../", import.meta.url), OUT = new URL("data/", ROOT);
 const UA = "Mozilla/5.0 (compatible; SpaceTrendDashboard-Reentry/1.0; GitHub Actions)";
 const now = Date.now();
-const RECENT_DAYS = 7, LAST_KEEP_DAYS = 10, GCAT_EVERY_MS = 864e5;
+const RECENT_DAYS = 7, LAST_KEEP_DAYS = 10, GCAT_EVERY_MS = 864e5, HIST_DAYS = 30, HIST_MAX = 240;
+// TLE 한 벌 → [기준시각(ms), 근지점(km), 원지점(km)]
+function tleHist(l1, l2) {
+  const yy = parseInt(l1.substring(18, 20), 10), ddd = parseFloat(l1.substring(20, 32));
+  const ep = Date.UTC(yy < 57 ? 2000 + yy : 1900 + yy, 0, 1) + (ddd - 1) * 864e5;
+  const e = parseFloat("0." + l2.substring(26, 33).trim()), n = parseFloat(l2.substring(52, 63));
+  if (!Number.isFinite(ep) || !(n > 0)) return null;
+  const a = Math.cbrt(398600.4418 / Math.pow(n * 2 * Math.PI / 86400, 2));
+  return [Math.round(ep), +(a * (1 - e) - 6378.137).toFixed(1), +(a * (1 + e) - 6378.137).toFixed(1)];
+}
 
 async function get(url, ms = 120000) {
   const ac = new AbortController(), t = setTimeout(() => ac.abort(), ms);
@@ -68,6 +78,21 @@ const last = {};
 for (const [k, v] of Object.entries(old.last_tle || {})) if (now - (v.seen || 0) < LAST_KEEP_DAYS * 864e5) last[k] = v;
 if (!status.errors.decaying) for (const o of dec) last[o.norad] = { n: o.n, l1: o.l1, l2: o.l2, seen: now };
 status.last = Object.keys(last).length;
+
+// 2-1) 근지점·원지점 이력: 직전 이력 + 이번 TLE (같은 기준시각은 한 번만)
+const hist = {};
+for (const [k, arr] of Object.entries(old.hist || {})) {
+  const keep = (arr || []).filter(r => now - r[0] < HIST_DAYS * 864e5);
+  if (keep.length && last[k]) hist[k] = keep;
+}
+for (const o of (status.errors.decaying ? [] : dec)) {
+  const h = tleHist(o.l1, o.l2); if (!h) continue;
+  const arr = hist[o.norad] || (hist[o.norad] = []);
+  if (!arr.some(r => r[0] === h[0])) arr.push(h);
+  arr.sort((a, b) => a[0] - b[0]);
+  if (arr.length > HIST_MAX) arr.splice(0, arr.length - HIST_MAX);
+}
+status.hist = Object.keys(hist).length;
 
 // 3) SATCAT: 임박 물체 + 최근 재진입 물체 행만
 let satHeader = null, satRows = {}, recentRows = [];
@@ -132,7 +157,7 @@ if (!decTle && !satcat_csv) {
   await fs.writeFile(new URL("reentry.json", OUT), JSON.stringify({
     at: now, src: "CelesTrak DECAYING · CelesTrak SATCAT · GCAT (CC-BY, J. McDowell)",
     decaying_at: status.errors.decaying ? (old.decaying_at || null) : now,
-    decaying_tle: decTle || "", satcat_csv, gcat_at: gAt || null, gcat_tsv, last_tle: last
+    decaying_tle: decTle || "", satcat_csv, gcat_at: gAt || null, gcat_tsv, last_tle: last, hist
   }) + "\n");
   if (satHeader && !status.errors.satcat)
     await fs.writeFile(new URL("reentry-recent.json", OUT), JSON.stringify({ at: now, days: RECENT_DAYS, satcat_csv: [satHeader, ...recentRows.map(r => r.line)].join("\n") + "\n" }) + "\n");

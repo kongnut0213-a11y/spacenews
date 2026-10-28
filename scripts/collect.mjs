@@ -20,7 +20,10 @@ const KEEP = 60;         // 피드별로 누적 보관하는 최대 기사 수 (
 // 국내 종합지(kind "kr")는 제목에 우주 관련 낱말이 있는 기사만 남긴다 (대시보드 SPK와 같음)
 const SPK = /우주|위성|궤도|발사체|누리호|로켓|우주항공청|우주청|항우연|천리안|아리랑|다누리|\bKPS\b|425 ?사업|아나시스|정찰위성|통신위성/;
 // 네이버 뉴스 검색 API (선택): 저장소 Secrets에 NAVER_CLIENT_ID, NAVER_CLIENT_SECRET이 있으면 사용
+// NAVER API HUB(네이버 클라우드) 키와 기존 네이버 개발자센터 키 모두 사용 가능
 const NAVER_ID = process.env.NAVER_CLIENT_ID || "", NAVER_SECRET = process.env.NAVER_CLIENT_SECRET || "";
+let NAVER_MODE = "";
+// 검색어 (Bing·네이버 공용)
 const NAVER_Q = ["정찰위성", "군 통신위성", "425사업", "아나시스", "군 위성", "우주작전", "우주항공청", "누리호", "발사체", "인공위성",
   "위성 발사", "차세대중형위성", "아리랑위성", "천리안위성", "초소형위성", "큐브위성", "한국형위성항법", "우주산업", "항공우주연구원", "우주 스타트업"];
 const PRESS = { "yna.co.kr": "연합뉴스", "yonhapnewstv.co.kr": "연합뉴스TV", "newsis.com": "뉴시스", "news1.kr": "뉴스1", "chosun.com": "조선일보", "joongang.co.kr": "중앙일보",
@@ -144,22 +147,53 @@ function mergeOld(items, oldItems) {
 async function naverNews() {
   const out = [], seenT = new Set(), cut = now - DAYS * 864e5;
   for (const q of NAVER_Q) {
-    const r = await fetch("https://openapi.naver.com/v1/search/news.json?display=30&sort=date&query=" + encodeURIComponent(q), {
-      headers: { "X-Naver-Client-Id": NAVER_ID, "X-Naver-Client-Secret": NAVER_SECRET } });
+    const qs = "?display=30&sort=date&query=" + encodeURIComponent(q);
+    // 새 키(NAVER API HUB, 네이버 클라우드)를 먼저 쓰고, 안 되면 기존 개발자센터 키 방식으로 호출
+    let r = NAVER_MODE !== "dev" ? await fetch("https://naverapihub.apigw.ntruss.com/search/v1/news" + qs, {
+      headers: { "X-NCP-APIGW-API-KEY-ID": NAVER_ID, "X-NCP-APIGW-API-KEY": NAVER_SECRET } }) : null;
+    if (!r || (!r.ok && r.status !== 429)) {
+      const r2 = await fetch("https://openapi.naver.com/v1/search/news.json" + qs, {
+        headers: { "X-Naver-Client-Id": NAVER_ID, "X-Naver-Client-Secret": NAVER_SECRET } });
+      if (r2.ok) { NAVER_MODE = "dev"; r = r2; } else if (!r) r = r2;
+    } else NAVER_MODE = "hub";
     if (!r.ok) throw new Error("네이버 HTTP " + r.status);
     for (const i of (await r.json()).items || []) {
       const t = plain(i.title, 300), u = (i.originallink || i.link || "").trim(), p = toISO(i.pubDate);
       const tk = t.replace(/\s+/g, "");
       if (!t || !/^https?:\/\//.test(u) || !p || Date.parse(p) < cut || !SPK.test(t) || seenT.has(tk)) continue;
       seenT.add(tk);
-      out.push({ t, d: plain(i.description), u, p, im: "", cg: q, sn: pressOf(u) });
+      out.push({ t, d: plain(i.description), u, p, im: "", cg: q, sn: pressOf(u), sv: "네이버 뉴스" });
     }
   }
+  return out;
+}
+// Bing 뉴스 RSS 검색 (키 불필요): 검색어별 결과를 모아 한 피드("bing:news")로 저장
+async function bingNews() {
+  const out = [], seenT = new Set(), seenU = new Set(), cut = now - DAYS * 864e5;
+  let fail = 0, lastErr = "";
+  for (const q of NAVER_Q) {
+    try {
+      const xml = await fetchText("https://www.bing.com/news/search?format=rss&setlang=ko-KR&cc=KR&mkt=ko-KR&q=" + encodeURIComponent(q), 20000,
+        "application/rss+xml, application/xml, text/xml, */*");
+      for (const i of arr(xp.parse(xml)?.rss?.channel?.item)) {
+        let u = txt(i.link).trim();
+        try { const v = new URL(u).searchParams.get("url"); if (/apiclick/i.test(u) && v) u = v; } catch {}
+        const t = plain(txt(i.title), 300), p = toISO(txt(i.pubDate)), tk = t.replace(/\s+/g, "");
+        if (!t || !/^https?:\/\//.test(u) || !p || Date.parse(p) < cut || !SPK.test(t) || seenT.has(tk) || seenU.has(u)) continue;
+        seenT.add(tk); seenU.add(u);
+        const src = txt(i["News:Source"]).replace(/\s+on MSN$/i, "").trim();
+        out.push({ t, d: plain(txt(i.description)), u, p, im: txt(i["News:Image"]).replace(/^http:/, "https:"), cg: q, sn: src || pressOf(u), sv: "Bing 뉴스" });
+      }
+    } catch (e) { fail++; lastErr = e.message; }
+    await new Promise(r => setTimeout(r, 400)); // 요청 간격
+  }
+  if (fail === NAVER_Q.length) throw new Error("Bing 검색 전부 실패: " + lastErr);
   return out;
 }
 async function collectNews() {
   const feeds = {}, old = (await readJSON("news.json"))?.feeds || {};
   const jobs = FEEDS.map(f => [f.url, f.name, () => fetchText(f.url, 30000, "application/rss+xml, application/atom+xml, application/xml, text/xml, */*").then(x => parseFeed(x, f))]);
+  jobs.push(["bing:news", "Bing 뉴스 검색", bingNews]);
   if (NAVER_ID && NAVER_SECRET) jobs.push(["naver:news", "네이버 뉴스 검색", naverNews]);
   await Promise.all(jobs.map(async ([url, name, run]) => {
     try {

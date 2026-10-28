@@ -49,13 +49,6 @@
     "tz": "Z"
   },
   {
-    "name": "뉴스스페이스",
-    "url": "https://www.newsspace.kr/rss/allArticle.xml",
-    "kind": "",
-    "region": "국내",
-    "tz": "+09:00"
-  },
-  {
     "name": "NASASpaceflight",
     "url": "https://www.nasaspaceflight.com/feed/",
     "kind": "",
@@ -114,6 +107,69 @@
   {
     "name": "전자신문",
     "url": "https://rss.etnews.com/Section901.xml",
+    "kind": "kr",
+    "region": "국내",
+    "tz": "+09:00"
+  },
+  {
+    "name": "국방신문",
+    "url": "https://www.gukbangnews.com/rss/allArticle.xml",
+    "kind": "kr",
+    "region": "국내",
+    "tz": "+09:00"
+  },
+  {
+    "name": "연합뉴스 북한",
+    "url": "https://www.yna.co.kr/rss/northkorea.xml",
+    "kind": "kr",
+    "region": "국내",
+    "tz": "+09:00"
+  },
+  {
+    "name": "연합뉴스 정치",
+    "url": "https://www.yna.co.kr/rss/politics.xml",
+    "kind": "kr",
+    "region": "국내",
+    "tz": "+09:00"
+  },
+  {
+    "name": "연합뉴스 산업",
+    "url": "https://www.yna.co.kr/rss/industry.xml",
+    "kind": "kr",
+    "region": "국내",
+    "tz": "+09:00"
+  },
+  {
+    "name": "경향신문",
+    "url": "https://www.khan.co.kr/rss/rssdata/total_news.xml",
+    "kind": "kr",
+    "region": "국내",
+    "tz": "+09:00"
+  },
+  {
+    "name": "동아일보",
+    "url": "https://rss.donga.com/total.xml",
+    "kind": "kr",
+    "region": "국내",
+    "tz": "+09:00"
+  },
+  {
+    "name": "한겨레 과학",
+    "url": "https://www.hani.co.kr/rss/science/",
+    "kind": "kr",
+    "region": "국내",
+    "tz": "+09:00"
+  },
+  {
+    "name": "지디넷코리아",
+    "url": "https://feeds.feedburner.com/zdkorea",
+    "kind": "kr",
+    "region": "국내",
+    "tz": "+09:00"
+  },
+  {
+    "name": "파이낸셜뉴스",
+    "url": "https://www.fnnews.com/rss/r20/fn_realnews_all.xml",
     "kind": "kr",
     "region": "국내",
     "tz": "+09:00"

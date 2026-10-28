@@ -15,7 +15,23 @@ const OUT = new URL("data/", ROOT);
 const FEEDS = JSON.parse(await fs.readFile(new URL("scripts/feeds.json", ROOT), "utf8"));
 const UA = "Mozilla/5.0 (compatible; SpaceTrendDashboard/1.0; GitHub Actions)";
 const DAYS = 8;          // 대시보드는 7일 기준, 경계 여유 1일
-const PER_FEED = 30;     // 피드당 최대 기사 수
+const PER_FEED = 30;     // 피드 1회 수집 시 최대 기사 수
+const KEEP = 60;         // 피드별로 누적 보관하는 최대 기사 수 (3시간마다 수집한 기사를 8일간 이어 붙임)
+// 국내 종합지(kind "kr")는 제목에 우주 관련 낱말이 있는 기사만 남긴다 (대시보드 SPK와 같음)
+const SPK = /우주|위성|궤도|발사체|누리호|로켓|우주항공청|우주청|항우연|천리안|아리랑|다누리|\bKPS\b|425 ?사업|아나시스|정찰위성|통신위성/;
+// 네이버 뉴스 검색 API (선택): 저장소 Secrets에 NAVER_CLIENT_ID, NAVER_CLIENT_SECRET이 있으면 사용
+const NAVER_ID = process.env.NAVER_CLIENT_ID || "", NAVER_SECRET = process.env.NAVER_CLIENT_SECRET || "";
+const NAVER_Q = ["정찰위성", "군 통신위성", "425사업", "아나시스", "군 위성", "우주작전", "우주항공청", "누리호", "발사체", "인공위성",
+  "위성 발사", "차세대중형위성", "아리랑위성", "천리안위성", "초소형위성", "큐브위성", "한국형위성항법", "우주산업", "항공우주연구원", "우주 스타트업"];
+const PRESS = { "yna.co.kr": "연합뉴스", "yonhapnewstv.co.kr": "연합뉴스TV", "newsis.com": "뉴시스", "news1.kr": "뉴스1", "chosun.com": "조선일보", "joongang.co.kr": "중앙일보",
+  "donga.com": "동아일보", "hani.co.kr": "한겨레", "khan.co.kr": "경향신문", "hankookilbo.com": "한국일보", "seoul.co.kr": "서울신문", "kmib.co.kr": "국민일보",
+  "segye.com": "세계일보", "munhwa.com": "문화일보", "mk.co.kr": "매일경제", "hankyung.com": "한국경제", "sedaily.com": "서울경제", "mt.co.kr": "머니투데이",
+  "edaily.co.kr": "이데일리", "asiae.co.kr": "아시아경제", "fnnews.com": "파이낸셜뉴스", "heraldcorp.com": "헤럴드경제", "etnews.com": "전자신문", "dt.co.kr": "디지털타임스",
+  "zdnet.co.kr": "지디넷코리아", "hellodd.com": "헬로디디", "dongascience.com": "동아사이언스", "kookbang.dema.mil.kr": "국방일보", "gukbangnews.com": "국방신문",
+  "kbs.co.kr": "KBS", "imbc.com": "MBC", "sbs.co.kr": "SBS", "ytn.co.kr": "YTN", "jtbc.co.kr": "JTBC", "ichannela.com": "채널A", "mbn.co.kr": "MBN",
+  "nocutnews.co.kr": "노컷뉴스", "ohmynews.com": "오마이뉴스", "pressian.com": "프레시안", "dailian.co.kr": "데일리안", "newspim.com": "뉴스핌", "ajunews.com": "아주경제",
+  "bloter.net": "블로터", "aitimes.com": "AI타임스", "sciencetimes.co.kr": "사이언스타임즈", "newsspace.kr": "뉴스스페이스", "n.news.naver.com": "네이버 뉴스" };
+const pressOf = u => { try { const h = new URL(u).hostname.replace(/^(www|m|news|biz|en)\./, ""); for (const k in PRESS) if (h === k || h.endsWith("." + k)) return PRESS[k]; return h; } catch { return ""; } };
 const SATCAT_EVERY = 20 * 36e5; // SATCAT은 20시간에 한 번만 (CelesTrak 요청 제한 대비)
 const now = Date.now();
 const status = { at: now, feeds: [], translate: null, launches: null, satcat: null };
@@ -112,20 +128,49 @@ function parseFeed(xml, feed) {
   }
   const cut = now - DAYS * 864e5;
   return out
-    .filter(x => x.t && /^https?:\/\//.test(x.u) && x.p && Date.parse(x.p) >= cut)
+    .filter(x => x.t && /^https?:\/\//.test(x.u) && x.p && Date.parse(x.p) >= cut && (feed.kind !== "kr" || SPK.test(x.t)))
     .sort((a, b) => (a.p < b.p ? 1 : -1))
     .slice(0, PER_FEED);
 }
+// 이전 실행에서 모은 기사와 합친다: 주소 기준 중복 제거, 8일 이내, 최신순 KEEP건
+function mergeOld(items, oldItems) {
+  const cut = now - DAYS * 864e5, seen = new Set(), out = [];
+  for (const x of items.concat(oldItems || [])) {
+    if (!x || !x.u || seen.has(x.u) || !x.p || Date.parse(x.p) < cut) continue;
+    seen.add(x.u); out.push(x);
+  }
+  return out.sort((a, b) => (a.p < b.p ? 1 : -1)).slice(0, KEEP);
+}
+async function naverNews() {
+  const out = [], seenT = new Set(), cut = now - DAYS * 864e5;
+  for (const q of NAVER_Q) {
+    const r = await fetch("https://openapi.naver.com/v1/search/news.json?display=30&sort=date&query=" + encodeURIComponent(q), {
+      headers: { "X-Naver-Client-Id": NAVER_ID, "X-Naver-Client-Secret": NAVER_SECRET } });
+    if (!r.ok) throw new Error("네이버 HTTP " + r.status);
+    for (const i of (await r.json()).items || []) {
+      const t = plain(i.title, 300), u = (i.originallink || i.link || "").trim(), p = toISO(i.pubDate);
+      const tk = t.replace(/\s+/g, "");
+      if (!t || !/^https?:\/\//.test(u) || !p || Date.parse(p) < cut || !SPK.test(t) || seenT.has(tk)) continue;
+      seenT.add(tk);
+      out.push({ t, d: plain(i.description), u, p, im: "", cg: q, sn: pressOf(u) });
+    }
+  }
+  return out;
+}
 async function collectNews() {
-  const feeds = {};
-  await Promise.all(FEEDS.map(async f => {
+  const feeds = {}, old = (await readJSON("news.json"))?.feeds || {};
+  const jobs = FEEDS.map(f => [f.url, f.name, () => fetchText(f.url, 30000, "application/rss+xml, application/atom+xml, application/xml, text/xml, */*").then(x => parseFeed(x, f))]);
+  if (NAVER_ID && NAVER_SECRET) jobs.push(["naver:news", "네이버 뉴스 검색", naverNews]);
+  await Promise.all(jobs.map(async ([url, name, run]) => {
     try {
-      const items = parseFeed(await fetchText(f.url, 30000, "application/rss+xml, application/atom+xml, application/xml, text/xml, */*"), f);
-      feeds[f.url] = { ok: 1, items };
-      status.feeds.push({ name: f.name, ok: 1, n: items.length });
+      const items = mergeOld(await run(), old[url]?.items);
+      feeds[url] = { ok: 1, items };
+      status.feeds.push({ name, ok: 1, n: items.length });
     } catch (e) {
-      feeds[f.url] = { ok: 0, err: e.message, items: [] };
-      status.feeds.push({ name: f.name, ok: 0, err: e.message });
+      // 수집 실패 시 이전에 모은 기사를 그대로 유지
+      const items = mergeOld([], old[url]?.items);
+      feeds[url] = { ok: items.length ? 1 : 0, err: e.message, items };
+      status.feeds.push({ name, ok: 0, err: e.message, kept: items.length });
     }
   }));
   // 전체 실패면 이전 파일을 지우지 않는다

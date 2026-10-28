@@ -33,6 +33,8 @@ jobs:
         env:
           FORCE_SATCAT: ${{ inputs.force_satcat }}
           DEEPL_API_KEY: ${{ secrets.DEEPL_API_KEY }}   # 선택: 없으면 Google 번역만 사용
+          NAVER_CLIENT_ID: ${{ secrets.NAVER_CLIENT_ID }}         # 선택: 네이버 뉴스 검색 API
+          NAVER_CLIENT_SECRET: ${{ secrets.NAVER_CLIENT_SECRET }}
       - name: 결과 저장
         run: |
           git config user.name "github-actions[bot]"

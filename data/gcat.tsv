@@ -1,5 +1,5 @@
 #Satcat	Name	Type	State	Owner	LDate	DDate	Status	Mass	MassFlag	DryMass	DryFlag	Length	LFlag	Diameter	DFlag	Span	SpanFlag	Shape
-# Updated 2026 Nov 18 0144:40
+# Updated 2026 Nov 19 0317:20
 00005	Vanguard I	P	US	NRL	1958 Mar 17	-	O	2		2		0.1		0.1		0.1		Sphere
 00011	Vanguard II	P	US	BSC	1959 Feb 17	-	O	10		10		0.5		0.5		0.5		Sphere
 00012	Vanguard SLV-4 Stage 3	R3	US	BSC	1959 Feb 17	-	O	195		22		1.5		0.7		1.5		Cyl
@@ -4979,7 +4979,7 @@
 20890	deb CZ-4 Y2 Stage 3	D  P	CN	MAI2	1990 Sep  3	-	O	0		0		0.0		0.0		0.0		-
 20891	deb CZ-4 Y2 Stage 3	D  P	CN	MAI2	1990 Sep  3	-	O	0		0		0.0		0.0		0.0		-
 20892	deb CZ-4 Y2 Stage 3	D  P	CN	MAI2	1990 Sep  3	-	O	0		0		0.0		0.0		0.0		-
-20893	deb CZ-4 Y2 Stage 3	D  P	CN	MAI2	1990 Sep  3	-	O	0		0		0.0		0.0		0.0		-
+20893	deb CZ-4 Y2 Stage 3	D  P	CN	MAI2	1990 Sep  3	2026 Nov  9	R	0		0		0.0		0.0		0.0		-
 20894	deb CZ-4 Y2 Stage 3	D  P	CN	MAI2	1990 Sep  3	-	O	0		0		0.0		0.0		0.0		-
 20895	deb CZ-4 Y2 Stage 3	D  P	CN	MAI2	1990 Sep  3	-	O	0		0		0.0		0.0		0.0		-
 20898	deb CZ-4 Y2 Stage 3	D  P	CN	MAI2	1990 Sep  3	2026 Mar  7	R	0		0		0.0		0.0		0.0		-
@@ -9236,7 +9236,7 @@
 30740	deb FY-1C	D  W	CN	CASC	1999 May 10	-	O	0		0		0.0		0.0		0.0		-
 30741	deb FY-1C	D  W	CN	CASC	1999 May 10	-	O	0		0		0.0		0.0		0.0		-
 30742	deb FY-1C	D  W	CN	CASC	1999 May 10	-	O	0		0		0.0		0.0		0.0		-
-30744	deb FY-1C	D  W	CN	CASC	1999 May 10	-	O	0		0		0.0		0.0		0.0		-
+30744	deb FY-1C	D  W	CN	CASC	1999 May 10	2026 Nov  2	R	0		0		0.0		0.0		0.0		-
 30745	deb FY-1C	D  W	CN	CASC	1999 May 10	2025 Sep  1	R	0		0		0.0		0.0		0.0		-
 30746	deb FY-1C	D  W	CN	CASC	1999 May 10	-	O	0		0		0.0		0.0		0.0		-
 30749	deb FY-1C	D  W	CN	CASC	1999 May 10	-	O	0		0		0.0		0.0		0.0		-
@@ -13048,7 +13048,7 @@
 37508	deb Kosmos-2251	D  I	RU	KVR	1993 Jun 16	2024 Jan  5	R	0		0		0.0		0.0		0.0		-
 37510	deb Kosmos-2251	D  I	RU	KVR	1993 Jun 16	2024 Sep 26	R	0		0		0.0		0.0		0.0		-
 37515	deb Kosmos-2251	D  I	RU	KVR	1993 Jun 16	2025 Nov 29	R	0		0		0.0		0.0		0.0		-
-37518	deb Kosmos-2251	D  I	RU	KVR	1993 Jun 16	-	O	0		0		0.0		0.0		0.0		-
+37518	deb Kosmos-2251	D  I	RU	KVR	1993 Jun 16	2026 Nov 28	R	0		0		0.0		0.0		0.0		-
 37521	deb Kosmos-2251	D  I	RU	KVR	1993 Jun 16	2023 Apr 27	R	0		0		0.0		0.0		0.0		-
 37527	deb Kosmos-2251	D  I	RU	KVR	1993 Jun 16	2024 Apr?	R	0		0		0.0		0.0		0.0		-
 37528	deb Kosmos-2251	D  I	RU	KVR	1993 Jun 16	-	O	0		0		0.0		0.0		0.0		-
@@ -18902,7 +18902,7 @@
 45707	Starlink 1412	P      R  M	US	SPXS	2020 Jun  4	2025 Jun 15 1930?	R	260		248	?	0.2	?	2.8		9.0	?	Box + pan
 45708	Starlink 1418	P      R  M	US	SPXS	2020 Jun  4	2025 Apr 12 0235	R	260		248	?	0.2	?	2.8		9.0	?	Box + pan
 45709	Starlink 1421	P      R+ M	US	SPXS	2020 Jun  4	2024 Aug 29	R	260		248	?	0.2	?	2.8		9.0	?	Box + pan
-45710	Starlink 1423	P      R  M	US	SPXS	2020 Jun  4	-	O	260		248	?	0.2	?	2.8		9.0	?	Box + pan
+45710	Starlink 1423	P      R  M	US	SPXS	2020 Jun  4	2026 Nov 17 2324	R	260		248	?	0.2	?	2.8		9.0	?	Box + pan
 45711	Starlink 1433	P      R  M	US	SPXS	2020 Jun  4	2026 Oct  5 2107?	R	260		248	?	0.2	?	2.8		9.0	?	Box + pan
 45712	Starlink 1434	P      R  M	US	SPXS	2020 Jun  4	-	O	260		248	?	0.2	?	2.8		9.0	?	Box + pan
 45713	Starlink 1436	P      M+mM	US	SPXS	2020 Jun  4	2024 Jun 22 2253	R	260		248	?	0.2	?	2.8		9.0	?	Box + pan
@@ -19305,7 +19305,7 @@
 46275	Athena	P	US	PNTV	2020 Sep  3	-	O	138		138		1.0		0.5		1.0		Box
 46276	UPMSat-2	P	E	UPM	2020 Sep  3	2025 Oct 11	R	45		45		0.6		0.5		0.6		Box
 46277	NEMO-HD	P	SI	SPSI	2020 Sep  3	-	O	65		65		0.2	?	0.5		0.5	?	Oct cyl
-46278	Iris	P	CA	GHG	2020 Sep  3	-	O	15		15		0.4		0.2		0.4		Box
+46278	Iris	P	CA	GHG	2020 Sep  3	2026 Nov 14	R	15		15		0.4		0.2		0.4		Box
 46279	SIMBA	P	B	IRMB	2020 Sep  3	2024 Aug 14	R	4		4		0.3		0.1		0.6		Box+2 pan
 46280	TRISAT	P	SI	UMARB	2020 Sep  3	2024 Sep 29	R	4		4		0.3		0.1		0.3		Box+2 pan
 46281	PICASSO	P	B	IASB	2020 Sep  3	2024 Apr  9?	R	4		4		0.3		0.1		0.3		Box
@@ -22232,7 +22232,7 @@
 50047	deb Kosmos-1408	D  W	SU	ROSK	1982 Sep 16	2023 Jan 25	R	0		0		0.0		0.0		0.0		-
 50049	deb Kosmos-1408	D  W	SU	ROSK	1982 Sep 16	2023 Oct 21	R	0		0		0.0		0.0		0.0		-
 50051	deb Kosmos-1408	D  W	SU	ROSK	1982 Sep 16	2024 Mar 31?	R	0		0		0.0		0.0		0.0		-
-50058	deb Kosmos-1408	D  W	SU	ROSK	1982 Sep 16	-	O	0		0		0.0		0.0		0.0		-
+50058	deb Kosmos-1408	D  W	SU	ROSK	1982 Sep 16	2026 Nov  4	R	0		0		0.0		0.0		0.0		-
 50069	deb Kosmos-1408	D  W	SU	ROSK	1982 Sep 16	2024 May 10	R	0		0		0.0		0.0		0.0		-
 50073	deb Kosmos-1408	D  W	SU	ROSK	1982 Sep 16	2023 Mar 15	R	0		0		0.0		0.0		0.0		-
 50077	deb Kosmos-1408	D  W	SU	ROSK	1982 Sep 16	2023 Feb 18	R	0		0		0.0		0.0		0.0		-
@@ -24038,7 +24038,7 @@
 53198	Starlink 4385	P      L  M	US	SPXS	2022 Jul 22	-	O	297		275	?	0.2	?	2.8		9.0	?	Box + pan
 53199	Starlink 4395	P      L  M	US	SPXS	2022 Jul 22	-	O	297		275	?	0.2	?	2.8		9.0	?	Box + pan
 53200	Starlink 4417	P      L  M	US	SPXS	2022 Jul 22	-	O	297		275	?	0.2	?	2.8		9.0	?	Box + pan
-53201	Starlink 4405	P      L  M	US	SPXS	2022 Jul 22	-	O	297		275	?	0.2	?	2.8		9.0	?	Box + pan
+53201	Starlink 4405	P      R  M	US	SPXS	2022 Jul 22	2026 Nov 18 0716	R	297		275	?	0.2	?	2.8		9.0	?	Box + pan
 53202	Starlink 4411	P      L  M	US	SPXS	2022 Jul 22	-	O	297		275	?	0.2	?	2.8		9.0	?	Box + pan
 53203	Starlink 4409	P      L  M	US	SPXS	2022 Jul 22	-	O	297		275	?	0.2	?	2.8		9.0	?	Box + pan
 53204	Starlink 4410	P      L  M	US	SPXS	2022 Jul 22	-	O	297		275	?	0.2	?	2.8		9.0	?	Box + pan
@@ -24216,8 +24216,8 @@
 53438	Starlink 4526	P      O  M	US	SPXS	2022 Aug 10	-	O	297		275	?	0.2	?	2.8		9.0	?	Box + pan
 53439	Starlink 4519	P      O  M	US	SPXS	2022 Aug 10	-	O	297		275	?	0.2	?	2.8		9.0	?	Box + pan
 53444	Tianfu Dongpo 07	P	CN	CGSTL	2022 Aug 10	2026 Oct  1	R	42		42		1.5	?	1.0	?	1.5	?	Box
-53445	Xi'an Hangtou 1	P	CN	CGSTL	2022 Aug 10	-	O	42		42		1.5	?	1.0	?	1.5	?	Box
-53446	Henan-1	P	CN	CGSTL	2022 Aug 10	-	O	42		42		1.5	?	1.0	?	1.5	?	Box
+53445	Xi'an Hangtou 1	P	CN	CGSTL	2022 Aug 10	2026 Nov 11	R	42		42		1.5	?	1.0	?	1.5	?	Box
+53446	Henan-1	P	CN	CGSTL	2022 Aug 10	2026 Nov  5	R	42		42		1.5	?	1.0	?	1.5	?	Box
 53447	Tianfu Dongpo 06	P	CN	CGSTL	2022 Aug 10	2026 Apr 25	R	42		42		1.5	?	1.0	?	1.5	?	Box
 53448	Puyin-1	P	CN	CGSTL	2022 Aug 10	2026 Oct 20	R	42		42		1.5	?	1.0	?	1.5	?	Box
 53449	Tianfu Dongpo 05	P	CN	CGSTL	2022 Aug 10	2026 Aug 19	R	42		42		1.5	?	1.0	?	1.5	?	Box
@@ -25652,7 +25652,7 @@
 55007	deb CZ-6A Y2	D  P	CN	CNSA	2022 Nov 11	2026 Mar 26	R	0		0		0.0		0.0		0.0		-
 55008	deb CZ-6A Y2	D  P	CN	CNSA	2022 Nov 11	-	O	0		0		0.0		0.0		0.0		-
 55009	STAR VIBE	P	PL	SCANW	2023 Jan  3	-	O	10	?	10	?	0.3		0.2		0.3		Box+ 2 pan
-55010	Menut	P	E	OCOSB/IEEC	2023 Jan  3	-	O	10	?	10	?	0.3		0.2		0.3		Box+ 2 pan
+55010	Menut	P	E	OCOSB/IEEC	2023 Jan  3	2026 Nov  7	R	10	?	10	?	0.3		0.2		0.3		Box+ 2 pan
 55011	BRO-8	P	F	UNSEEN	2023 Jan  3	-	O	10	?	10	?	0.3		0.2		0.3		Box
 55012	Connecta T1.2	P	TR	PLNSST	2023 Jan  3	-	O	4		4		0.3		0.1		0.3		Box
 55013	Lemur-2 PhilAri	P	L	SPIREL/ESA	2023 Jan  3	2024 Aug 13	R	4.600		4.600		0.3		0.1		0.3		Box+2 pan
@@ -37974,8 +37974,8 @@
 67684	CORAL	P    D	I	ROSAP	2025 Oct 26	2026 Aug  1	R	2		2		0.2		0.1		0.2		Box
 67685	Gxiba-1	P    D	MX	UPAEP	2025 Oct 26	-	O	1		1		0.1		0.1		0.1		Box
 67686	UiTMSAT-2	P    D	MY	UITM	2025 Oct 26	2026 Oct 22	R	1		1		0.1		0.1		0.1		Box
-67687	LEOPARD	P    D	J	KYUT	2025 Oct 26	-	O	3		3		0.3		0.1		0.7		Box+ 2 pan
-67688	Teruteru	P    D	J	HUS	2025 Oct 26	-	O	1		1		0.1		0.1		0.1		Box
+67687	LEOPARD	P    D	J	KYUT	2025 Oct 26	2026 Nov  3	R	3		3		0.3		0.1		0.7		Box+ 2 pan
+67688	Teruteru	P    D	J	HUS	2025 Oct 26	2026 Nov 12	R	1		1		0.1		0.1		0.1		Box
 67689	Chonfu Shiyong Shiyan HQ 4	P	CN	ZLZB	2026 Feb  7	-	O	8000	?	8000		10.0	?	3.5	?	10.0	?	Box+wings?
 67690	CZ-2F T6 Stage 2	R2	CN	CALT	2026 Feb  7	-	O	5500		5500		15.5		3.3		15.5		Cyl
 67691	CZ-2F sep motor cover	C  F	CN	CALT	2026 Feb  7	2026 Mar 12	R	1		1		0.2		0.2		0.2		Cone
@@ -39760,7 +39760,7 @@
 69504	BRO-22	P	F	UNSEEN	2026 Jun 12	-	O	10		10		0.4		0.2		0.4		Box
 69505	HORN-L	P	J	BULL	2026 Jun 12	2026 Aug 27	R	11		11		0.4		0.1		2.0	?	Box+triangle
 69506	VERTECS	P	J	KYUT	2026 Jun 12	-	O	9		9		0.3		0.1		0.5		Box + 2 pan
-69507	HORN-R	P	J	BULL	2026 Jun 12	-	O	11		11		0.4		0.1		2.0	?	Box+triangle
+69507	HORN-R	P	J	BULL	2026 Jun 12	2026 Nov 15	R	11		11		0.4		0.1		2.0	?	Box+triangle
 69508	Starlink 37536	P      O  M	US	SPXS	2026 Jun 12	-	O	575		530	?	0.3	?	4.1		29.0	?	Box + pan
 69509	Starlink 37341	P      O  M	US	SPXS	2026 Jun 12	-	O	575		530	?	0.3	?	4.1		29.0	?	Box + pan
 69510	Starlink 36536	P      O  M	US	SPXS	2026 Jun 12	-	O	575		530	?	0.3	?	4.1		29.0	?	Box + pan

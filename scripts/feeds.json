@@ -116,7 +116,8 @@
     "url": "https://www.gukbangnews.com/rss/allArticle.xml",
     "kind": "kr",
     "region": "국내",
-    "tz": "+09:00"
+    "tz": "+09:00",
+    "prior": "mil"
   },
   {
     "name": "연합뉴스 북한",

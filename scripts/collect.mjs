@@ -1,6 +1,6 @@
 // 우주 동향 대시보드 데이터 수집기
 // GitHub Actions에서 3시간마다 실행되어 data/ 폴더에 JSON을 만든다.
-//   data/news.json      : RSS 피드별 최근 기사 (필터링·분류는 대시보드가 담당)
+//   data/news.json      : RSS 피드별 최근 기사. 군사/일반 분류(c)와 중복 묶음(g, dp, nd)을 붙여 저장 (scripts/classify.mjs)
 //   data/launches.json  : Launch Library 2 예정/최근 발사
 //   data/satcat.json    : CelesTrak SATCAT 국가별 위성 집계 (하루 1회)
 //   data/status.json    : 각 수집 단계의 성공/실패 기록
@@ -9,6 +9,7 @@ import fs from "node:fs/promises";
 import { calc } from "./satcat-calc.mjs";
 import { pre, HG } from "./text-prep.mjs";
 import { translateAll } from "./translate.mjs";
+import { classifyAndDedupe, normUrl } from "./classify.mjs";
 
 const ROOT = new URL("../", import.meta.url);
 const OUT = new URL("data/", ROOT);
@@ -18,7 +19,7 @@ const DAYS = 8;          // 대시보드는 7일 기준, 경계 여유 1일
 const PER_FEED = 30;     // 피드 1회 수집 시 최대 기사 수
 const KEEP = 60;         // 피드별로 누적 보관하는 최대 기사 수 (3시간마다 수집한 기사를 8일간 이어 붙임)
 // 국내 종합지(kind "kr")는 제목에 우주 관련 낱말이 있는 기사만 남긴다 (대시보드 SPK와 같음)
-const SPK = /우주|위성|궤도|발사체|누리호|로켓|우주항공청|우주청|항우연|천리안|아리랑|다누리|\bKPS\b|425 ?사업|아나시스|정찰위성|통신위성/;
+const SPK = /우주|위성|(?<![본정제])궤도|발사체|누리호|로켓|우주항공청|우주청|항우연|천리안|아리랑|다누리|\bKPS\b|425 ?사업|아나시스|정찰위성|통신위성/;
 // 네이버 뉴스 검색 API (선택): 저장소 Secrets에 NAVER_CLIENT_ID, NAVER_CLIENT_SECRET이 있으면 사용
 // NAVER API HUB(네이버 클라우드) 키와 기존 네이버 개발자센터 키 모두 사용 가능
 const NAVER_ID = process.env.NAVER_CLIENT_ID || "", NAVER_SECRET = process.env.NAVER_CLIENT_SECRET || "";
@@ -37,7 +38,7 @@ const PRESS = { "yna.co.kr": "연합뉴스", "yonhapnewstv.co.kr": "연합뉴스
 const pressOf = u => { try { const h = new URL(u).hostname.replace(/^(www|m|news|biz|en)\./, ""); for (const k in PRESS) if (h === k || h.endsWith("." + k)) return PRESS[k]; return h; } catch { return ""; } };
 const SATCAT_EVERY = 20 * 36e5; // SATCAT은 20시간에 한 번만 (CelesTrak 요청 제한 대비)
 const now = Date.now();
-const status = { at: now, feeds: [], translate: null, launches: null, satcat: null };
+const status = { at: now, feeds: [], translate: null, classify: null, launches: null, satcat: null };
 
 async function fetchText(url, ms = 30000, accept = "*/*") {
   const ac = new AbortController();
@@ -135,12 +136,13 @@ function parseFeed(xml, feed) {
     .sort((a, b) => (a.p < b.p ? 1 : -1))
     .slice(0, PER_FEED);
 }
-// 이전 실행에서 모은 기사와 합친다: 주소 기준 중복 제거, 8일 이내, 최신순 KEEP건
+// 이전 실행에서 모은 기사와 합친다: 정규화한 주소 기준 중복 제거(utm 등 추적 변수, www/m/amp 차이 무시), 8일 이내, 최신순 KEEP건
 function mergeOld(items, oldItems) {
   const cut = now - DAYS * 864e5, seen = new Set(), out = [];
   for (const x of items.concat(oldItems || [])) {
-    if (!x || !x.u || seen.has(x.u) || !x.p || Date.parse(x.p) < cut) continue;
-    seen.add(x.u); out.push(x);
+    const k = x && x.u ? normUrl(x.u) : "";
+    if (!k || seen.has(k) || !x.p || Date.parse(x.p) < cut) continue;
+    seen.add(k); out.push(x);
   }
   return out.sort((a, b) => (a.p < b.p ? 1 : -1)).slice(0, KEEP);
 }
@@ -210,6 +212,14 @@ async function collectNews() {
   // 전체 실패면 이전 파일을 지우지 않는다
   if (!Object.values(feeds).some(f => f.ok)) throw new Error("모든 피드 수집 실패");
   await translateNews(feeds);
+  // 번역(kt)까지 끝난 뒤에 분류·중복 판정 (번역 제목으로 국내·해외 기사도 비교)
+  try {
+    const ov = JSON.parse(await fs.readFile(new URL("scripts/news-overrides.json", ROOT), "utf8").catch(() => "{}"));
+    delete ov._설명;
+    status.classify = { ok: 1, ...classifyAndDedupe(feeds, FEEDS, ov) };
+  } catch (e) {
+    status.classify = { ok: 0, err: e.message };   // 분류가 실패해도 기사 저장은 계속
+  }
   await writeNews({ at: now, feeds });
 }
 

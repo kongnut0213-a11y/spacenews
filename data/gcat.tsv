@@ -1,5 +1,5 @@
 #Satcat	Name	Type	State	Owner	LDate	DDate	Status	Mass	MassFlag	DryMass	DryFlag	Length	LFlag	Diameter	DFlag	Span	SpanFlag	Shape
-# Updated 2026 Nov 19 0317:20
+# Updated 2026 Nov 22 0107:48
 00005	Vanguard I	P	US	NRL	1958 Mar 17	-	O	2		2		0.1		0.1		0.1		Sphere
 00011	Vanguard II	P	US	BSC	1959 Feb 17	-	O	10		10		0.5		0.5		0.5		Sphere
 00012	Vanguard SLV-4 Stage 3	R3	US	BSC	1959 Feb 17	-	O	195		22		1.5		0.7		1.5		Cyl
@@ -9910,7 +9910,7 @@
 31616	deb FY-1C	D  W	CN	CASC	1999 May 10	2024 Jun  1	R	0		0		0.0		0.0		0.0		-
 31617	deb FY-1C	D  W	CN	CASC	1999 May 10	2025 Jul 20	R	0		0		0.0		0.0		0.0		-
 31618	deb FY-1C	D  W	CN	CASC	1999 May 10	-	O	0		0		0.0		0.0		0.0		-
-31619	deb FY-1C	D  W	CN	CASC	1999 May 10	-	O	0		0		0.0		0.0		0.0		-
+31619	deb FY-1C	D  W	CN	CASC	1999 May 10	2026 Nov 18	R	0		0		0.0		0.0		0.0		-
 31620	deb FY-1C	D  W	CN	CASC	1999 May 10	-	O	0		0		0.0		0.0		0.0		-
 31622	deb FY-1C	D  W	CN	CASC	1999 May 10	-	O	0		0		0.0		0.0		0.0		-
 31623	deb FY-1C	D  W	CN	CASC	1999 May 10	-	O	0		0		0.0		0.0		0.0		-
@@ -10965,7 +10965,7 @@
 33815	deb Kosmos-2251	D  I	RU	KVR	1993 Jun 16	2026 Feb 24	R	0		0		0.0		0.0		0.0		-
 33816	deb Kosmos-2251	D  I	RU	KVR	1993 Jun 16	-	O	0		0		0.0		0.0		0.0		-
 33817	deb Kosmos-2251	D  I	RU	KVR	1993 Jun 16	2025 Feb 21	R	0		0		0.0		0.0		0.0		-
-33818	deb Kosmos-2251	D  I	RU	KVR	1993 Jun 16	-	O	0		0		0.0		0.0		0.0		-
+33818	deb Kosmos-2251	D  I	RU	KVR	1993 Jun 16	2026 Nov 18	R	0		0		0.0		0.0		0.0		-
 33819	deb Kosmos-2251	D  I	RU	KVR	1993 Jun 16	-	O	0		0		0.0		0.0		0.0		-
 33821	deb Kosmos-2251	D  I	RU	KVR	1993 Jun 16	-	O	0		0		0.0		0.0		0.0		-
 33822	deb Kosmos-2251	D  I	RU	KVR	1993 Jun 16	-	O	0		0		0.0		0.0		0.0		-
@@ -13205,7 +13205,7 @@
 37731	CZ-2C Y25 Stage 2	R2	CN	CASC	2011 Jul  6	-	O	3800	?	3800	?	8.4		3.3		8.4		Cyl
 37732	CZ-2C Stage 2 motor cover	C  F	CN	CASC	2011 Jul  6	-	O	1		1		0.2		0.2		0.2		Cone
 37733	CZ-2C Stage 2 motor cover	C  F	CN	CASC	2011 Jul  6	-	O	1		1		0.2		0.2		0.2		Cone
-37734	CZ-2C Stage 2 motor cover	C  F	CN	CASC	2011 Jul  6	-	O	1		1		0.2		0.2		0.2		Cone
+37734	CZ-2C Stage 2 motor cover	C  F	CN	CASC	2011 Jul  6	2026 Oct 31	R	1		1		0.2		0.2		0.2		Cone
 37735	CZ-2C Stage 2 motor cover	C  F	CN	CASC	2011 Jul  6	-	O	1		1		0.2		0.2		0.2		Cone
 37737	Tian Lian 1-02	P   G	CN	CAST	2011 Jul 11	-	O	2500	?	1060	?	6.0	?	1.7	?	18.1	?	Box + 2 Pan + Dish
 37739	Globalstar M083	P      O	US	GLOBL	2011 Jul 13	-	O	715		500	?	4.0	?	2.0	?	12.0	?	Trap Cyl + 2 Pan
@@ -18771,7 +18771,7 @@
 45541	Starlink 1369	P      R  M	US	SPXS	2020 Apr 22	2025 Apr  5 2000?	R	260		248	?	0.2	?	2.8		9.0	?	Box + pan
 45542	Starlink 1371	P      R  M	US	SPXS	2020 Apr 22	-	O	260		248	?	0.2	?	2.8		9.0	?	Box + pan
 45543	Starlink 1372	P      L  M	US	SPXS	2020 Apr 22	-	O	260		248	?	0.2	?	2.8		9.0	?	Box + pan
-45544	Starlink 1373	P      R  M	US	SPXS	2020 Apr 22	-	O	260		248	?	0.2	?	2.8		9.0	?	Box + pan
+45544	Starlink 1373	P      R  M	US	SPXS	2020 Apr 22	2026 Nov 21 0218	R	260		248	?	0.2	?	2.8		9.0	?	Box + pan
 45545	Starlink 1374	P      R  M	US	SPXS	2020 Apr 22	2025 Feb 22 1222	R	260		248	?	0.2	?	2.8		9.0	?	Box + pan
 45546	Starlink 1375	P      R  M	US	SPXS	2020 Apr 22	2025 Mar 12 1800?	R	260		248	?	0.2	?	2.8		9.0	?	Box + pan
 45547	Starlink 1377	P      R+ M	US	SPXS	2020 Apr 22	2024 Sep  8 2044	R	260		248	?	0.2	?	2.8		9.0	?	Box + pan
@@ -24420,7 +24420,7 @@
 53662	Starlink 4357	P      L  M	US	SPXS	2022 Aug 31	-	O	300		290	?	0.2	?	2.8		9.0	?	Box + pan
 53663	Starlink 4457	P      L  M	US	SPXS	2022 Aug 31	-	O	300		290	?	0.2	?	2.8		9.0	?	Box + pan
 53664	Starlink 4471	P      L  M	US	SPXS	2022 Aug 31	-	O	300		290	?	0.2	?	2.8		9.0	?	Box + pan
-53665	Starlink 4334	P      L  M	US	SPXS	2022 Aug 31	-	O	300		290	?	0.2	?	2.8		9.0	?	Box + pan
+53665	Starlink 4334	P      R  M	US	SPXS	2022 Aug 31	2026 Nov 18 1854	R	300		290	?	0.2	?	2.8		9.0	?	Box + pan
 53666	Starlink 4449	P      R  M	US	SPXS	2022 Aug 31	2025 May  1	R	300		290	?	0.2	?	2.8		9.0	?	Box + pan
 53667	Starlink 4406	P      L  M	US	SPXS	2022 Aug 31	-	O	300		290	?	0.2	?	2.8		9.0	?	Box + pan
 53668	Starlink 4458	P      R  M	US	SPXS	2022 Aug 31	2026 Nov 17 1630?	R	300		290	?	0.2	?	2.8		9.0	?	Box + pan
@@ -30364,7 +30364,7 @@
 59875	Starlink 31936	P      O  M	US	SPXS	2024 May 24	-	O	730		700	?	0.3	?	4.1		29.0	?	Box + pan
 59876	Starlink 31935	P      O  M	US	SPXS	2024 May 24	-	O	730		700	?	0.3	?	4.1		29.0	?	Box + pan
 59877	Starlink 31934	P      O  M	US	SPXS	2024 May 24	-	O	730		700	?	0.3	?	4.1		29.0	?	Box + pan
-59878	Starlink 31943	P      R  M	US	SPXS	2024 May 24	-	O	730		700	?	0.3	?	4.1		29.0	?	Box + pan
+59878	Starlink 31943	P      R  M	US	SPXS	2024 May 24	2026 Nov 21 0958	R	730		700	?	0.3	?	4.1		29.0	?	Box + pan
 59879	Starlink 31926	P      O rM	US	SPXS	2024 May 24	-	O	730		700	?	0.3	?	4.1		29.0	?	Box + pan
 59880	Starlink 31919	P      O  M	US	SPXS	2024 May 24	-	O	730		700	?	0.3	?	4.1		29.0	?	Box + pan
 59881	PREFIRE 2	P	US	JPL	2024 May 25	-	O	10	?	10	?	0.3		0.2		12.7		Box+sail
@@ -37305,6 +37305,7 @@
 66990	Tongxin Jishu Shiyan 22	P   G	CN	ZZB/SAST	2025 Dec  9	-	O	5000	?	6000	?	5.0		4.0	?	30.0	?	Box+ 2 pan+dish?
 66991	CZ-3B Y119 Stage 3	R3	CN	CASC	2025 Dec  9	-	O	8400	?	2800	?	12.4		3.0		12.4		Cyl
 66992	USA 570	P ------C	US	NROC/USN	2025 Dec  9	-	O	1000	?	1000	?	2.0	?	2.0	?	2.0	?	Cyl
+66993	SPNeX	P	EG	EGYSA	2025 Dec 10	-	O	12	?	12	?	0.3	?	0.2	?	0.5	?	Box + 4 pan
 66994	UAE-813	P	UAE	UAESA/UAEU	2025 Dec 10	-	O	260	?	260	?	1.0	?	1.0	?	6.0	?	Box+ pan?
 67002	Lijian-1 Y11 Stage 4	R4	CN	CASC	2025 Dec 10	2026 Mar  5 0042	R	500	?	500		1.5		1.5		1.5		Cyl
 67003	Starlink 35660	P      O  M	US	SPXS	2025 Dec 10	-	O	575		530	?	0.3	?	4.1		29.0	?	Box + pan

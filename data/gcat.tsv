@@ -1,5 +1,5 @@
 #Satcat	Name	Type	State	Owner	LDate	DDate	Status	Mass	MassFlag	DryMass	DryFlag	Length	LFlag	Diameter	DFlag	Span	SpanFlag	Shape
-# Updated 2026 Nov 22 0107:48
+# Updated 2026 Nov 23 0026:10
 00005	Vanguard I	P	US	NRL	1958 Mar 17	-	O	2		2		0.1		0.1		0.1		Sphere
 00011	Vanguard II	P	US	BSC	1959 Feb 17	-	O	10		10		0.5		0.5		0.5		Sphere
 00012	Vanguard SLV-4 Stage 3	R3	US	BSC	1959 Feb 17	-	O	195		22		1.5		0.7		1.5		Cyl
@@ -18891,7 +18891,7 @@
 45696	Starlink 1422	P      L  M	US	SPXS	2020 Jun  4	-	O	260		248	?	0.2	?	2.8		9.0	?	Box + pan
 45697	Starlink 1351	P      R  M	US	SPXS	2020 Jun  4	-	O	260		248	?	0.2	?	2.8		9.0	?	Box + pan
 45698	Starlink 1370	P      R+ M	US	SPXS	2020 Jun  4	2024 Jul 27 2141?	R	260		248	?	0.2	?	2.8		9.0	?	Box + pan
-45699	Starlink 1398	P      R  M	US	SPXS	2020 Jun  4	2025 Mar 28 1534	R	260		248	?	0.2	?	2.8		9.0	?	Box + pan
+45699	Starlink 1398	P      R  M	US	SPXS	2020 Jun  4	2026 Mar 28 1534	R	260		248	?	0.2	?	2.8		9.0	?	Box + pan
 45700	Starlink 1400	P      R  M	US	SPXS	2020 Jun  4	2026 Nov 10 1932	R	260		248	?	0.2	?	2.8		9.0	?	Box + pan
 45701	Starlink 1403	P      R  M	US	SPXS	2020 Jun  4	-	O	260		248	?	0.2	?	2.8		9.0	?	Box + pan
 45702	Starlink 1405	P      R cM	US	SPXS	2020 Jun  4	2025 Aug 21	R	260		248	?	0.2	?	2.8		9.0	?	Box + pan
@@ -18916,7 +18916,7 @@
 45727	RAAF M2 Pathfinder	P	AU	RAAF/UNSW	2020 Jun 13	-	O	4		4		0.3		0.1		0.3		Box
 45728	Electron 12 Kick Stage	R3      c	NZ	RLABN	2020 Jun 13	-	O	50		50		0.4		1.2		1.2		Trunc cone
 45730	Starlink 1461	P      R+ M	US	SPXS	2020 Jun 13	2024 Aug 23 2210?	R	260		248	?	0.2	?	2.8		9.0	?	Box + pan
-45731	Starlink 1465	P      R  M	US	SPXS	2020 Jun 13	-	O	260		248	?	0.2	?	2.8		9.0	?	Box + pan
+45731	Starlink 1465	P      R  M	US	SPXS	2020 Jun 13	2026 nov 21 1802	R	260		248	?	0.2	?	2.8		9.0	?	Box + pan
 45732	Starlink 1466	P      R+ M	US	SPXS	2020 Jun 13	2024 Sep  2 0516	R	260		248	?	0.2	?	2.8		9.0	?	Box + pan
 45733	Starlink 1467	P      M+ M	US	SPXS	2020 Jun 13	2024 Nov 23 2037	R	260		248	?	0.2	?	2.8		9.0	?	Box + pan
 45734	Starlink 1468	P      M+ M	US	SPXS	2020 Jun 13	2024 Dec 28 1924?	R	260		248	?	0.2	?	2.8		9.0	?	Box + pan
@@ -19375,7 +19375,7 @@
 46346	Starlink 1546	P      R mM	US	SPXS	2020 Sep  3	2023 Jun 10 0400?	R	260		248	?	0.2	?	2.8		9.0	?	Box + pan
 46347	Starlink 1547	P      R  M	US	SPXS	2020 Sep  3	2026 Jul  7 1449	R	260		248	?	0.2	?	2.8		9.0	?	Box + pan
 46348	Starlink 1553	P      R  M	US	SPXS	2020 Sep  3	-	O	260		248	?	0.2	?	2.8		9.0	?	Box + pan
-46349	Starlink 1575	P      R  M	US	SPXS	2020 Sep  3	2025 Apr 10 0900?	R	260		248	?	0.2	?	2.8		9.0	?	Box + pan
+46349	Starlink 1575	P      R  M	US	SPXS	2020 Sep  3	2026 Apr 10 0900?	R	260		248	?	0.2	?	2.8		9.0	?	Box + pan
 46350	Starlink 1617	P      R  M	US	SPXS	2020 Sep  3	2024 Jun  7 1945	R	260		248	?	0.2	?	2.8		9.0	?	Box + pan
 46351	Starlink 1646	P      R  M	US	SPXS	2020 Sep  3	2026 Aug 10 2014	R	260		248	?	0.2	?	2.8		9.0	?	Box + pan
 46352	Starlink 1653	P      R  M	US	SPXS	2020 Sep  3	2026 Aug 19 2347	R	260		248	?	0.2	?	2.8		9.0	?	Box + pan
@@ -20496,7 +20496,7 @@
 47743	Starlink 2157	P      R  M	US	SPXS	2021 Mar  4	2025 Jan 12 0619	R	260		248	?	0.2	?	2.8		9.0	?	Box + pan
 47744	Starlink 2158	P      R+ M	US	SPXS	2021 Mar  4	2024 Jul  3 2230?	R	260		248	?	0.2	?	2.8		9.0	?	Box + pan
 47745	Starlink 2159	P      R  M	US	SPXS	2021 Mar  4	2026 Sep  5 0343	R	260		248	?	0.2	?	2.8		9.0	?	Box + pan
-47746	Starlink 2160	P      R  M	US	SPXS	2021 Mar  4	-	O	260		248	?	0.2	?	2.8		9.0	?	Box + pan
+47746	Starlink 2160	P      R  M	US	SPXS	2021 Mar  4	2026 Nov 21 1808	R	260		248	?	0.2	?	2.8		9.0	?	Box + pan
 47747	Starlink 2161	P      L  M	US	SPXS	2021 Mar  4	-	O	260		248	?	0.2	?	2.8		9.0	?	Box + pan
 47748	Starlink 2162	P      R  M	US	SPXS	2021 Mar  4	2026 Jul 13 2054	R	260		248	?	0.2	?	2.8		9.0	?	Box + pan
 47749	Starlink 2163	P      R  M	US	SPXS	2021 Mar  4	2026 Aug 10 1008	R	260		248	?	0.2	?	2.8		9.0	?	Box + pan
@@ -20988,8 +20988,8 @@
 48328	Starlink 2504	P      R  M	US	SPXS	2021 Apr 29	-	O	260		248	?	0.2	?	2.8		9.0	?	Box + pan
 48329	Starlink 2510	P      R  M	US	SPXS	2021 Apr 29	-	O	260		248	?	0.2	?	2.8		9.0	?	Box + pan
 48330	Starlink 2501	P      R  M	US	SPXS	2021 Apr 29	-	O	260		248	?	0.2	?	2.8		9.0	?	Box + pan
-48331	Starlink 2514	P      L  M	US	SPXS	2021 Apr 29	-	O	260		248	?	0.2	?	2.8		9.0	?	Box + pan
-48332	Starlink 2511	P      R  M	US	SPXS	2021 Apr 29	2025 Jan  8 1530?	R	260		248	?	0.2	?	2.8		9.0	?	Box + pan
+48331	Starlink 2514	P      R  M	US	SPXS	2021 Apr 29	-	O	260		248	?	0.2	?	2.8		9.0	?	Box + pan
+48332	Starlink 2511	P      R  M	US	SPXS	2021 Apr 29	2026 Jan 12 0911	R	260		248	?	0.2	?	2.8		9.0	?	Box + pan
 48333	Starlink 2518	P      R  M	US	SPXS	2021 Apr 29	-	O	260		248	?	0.2	?	2.8		9.0	?	Box + pan
 48334	Starlink 2470	P      R  M	US	SPXS	2021 Apr 29	-	O	260		248	?	0.2	?	2.8		9.0	?	Box + pan
 48335	Starlink 2441	P      R  M	US	SPXS	2021 Apr 29	2025 Jan  7 1733?	R	260		248	?	0.2	?	2.8		9.0	?	Box + pan
@@ -21221,7 +21221,7 @@
 48581	Starlink 2235	P      L  M	US	SPXS	2021 May 15	-	O	260		248	?	0.2	?	2.8		9.0	?	Box + pan
 48582	Starlink 2236	P      R  M	US	SPXS	2021 May 15	2026 Oct 26 1303	R	260		248	?	0.2	?	2.8		9.0	?	Box + pan
 48583	Starlink 2237	P      R  M	US	SPXS	2021 May 15	-	O	260		248	?	0.2	?	2.8		9.0	?	Box + pan
-48584	Starlink 2238	P      R  M	US	SPXS	2021 May 15	2025 Apr 30 1733	R	260		248	?	0.2	?	2.8		9.0	?	Box + pan
+48584	Starlink 2238	P      R  M	US	SPXS	2021 May 15	2026 Apr 30 1733	R	260		248	?	0.2	?	2.8		9.0	?	Box + pan
 48585	Starlink 2240	P      R  M	US	SPXS	2021 May 15	2025 Jan  1 1927	R	260		248	?	0.2	?	2.8		9.0	?	Box + pan
 48586	Starlink 2241	P      R  M	US	SPXS	2021 May 15	-	O	260		248	?	0.2	?	2.8		9.0	?	Box + pan
 48587	Starlink 2242	P      R  M	US	SPXS	2021 May 15	2025 Jan  7 0055	R	260		248	?	0.2	?	2.8		9.0	?	Box + pan
@@ -23475,7 +23475,7 @@
 52518	deb Kosmos-1408	D  W	SU	ROSK	1982 Sep 16	2023 Oct  3	R	0		0		0.0		0.0		0.0		-
 52523	deb Kosmos-1408	D  W	SU	ROSK	1982 Sep 16	2023 Jan 12	R	0		0		0.0		0.0		0.0		-
 52533	Starlink 3951	P      R  M	US	SPXS	2022 May 13	2025 Jan 17 1407	R	297		275	?	0.2	?	2.8		9.0	?	Box + pan
-52534	Starlink 3952	P      R  M	US	SPXS	2022 May 13	2025 Apr 17 1935	R	297		275	?	0.2	?	2.8		9.0	?	Box + pan
+52534	Starlink 3952	P      R  M	US	SPXS	2022 May 13	2026 Apr 17 1935	R	297		275	?	0.2	?	2.8		9.0	?	Box + pan
 52535	Starlink 3958	P      O  M	US	SPXS	2022 May 13	-	O	297		275	?	0.2	?	2.8		9.0	?	Box + pan
 52536	Starlink 3964	P      O  M	US	SPXS	2022 May 13	-	O	297		275	?	0.2	?	2.8		9.0	?	Box + pan
 52537	Starlink 3897	P      O  M	US	SPXS	2022 May 13	-	O	297		275	?	0.2	?	2.8		9.0	?	Box + pan
@@ -23515,7 +23515,7 @@
 52571	deb Kosmos-1408	D  W	SU	ROSK	1982 Sep 16	2023 Jul 22	R	0		0		0.0		0.0		0.0		-
 52572	deb Kosmos-1408	D  W	SU	ROSK	1982 Sep 16	2023 Mar 11	R	0		0		0.0		0.0		0.0		-
 52573	deb Kosmos-1408	D  W	SU	ROSK	1982 Sep 16	2023 Sep 29	R	0		0		0.0		0.0		0.0		-
-52574	Starlink 3901	P      L  M	US	SPXS	2022 May 13	-	O	297		275	?	0.2	?	2.8		9.0	?	Box + pan
+52574	Starlink 3901	P      R  M	US	SPXS	2022 May 13	2026 Nov 22 1022	R	297		275	?	0.2	?	2.8		9.0	?	Box + pan
 52575	Starlink 3920	P      R  M	US	SPXS	2022 May 13	2026 Feb 19 1534	R	297		275	?	0.2	?	2.8		9.0	?	Box + pan
 52576	Starlink 3932	P      O  M	US	SPXS	2022 May 13	-	O	297		275	?	0.2	?	2.8		9.0	?	Box + pan
 52577	Starlink 3836	P      O  M	US	SPXS	2022 May 13	-	O	297		275	?	0.2	?	2.8		9.0	?	Box + pan
@@ -24533,7 +24533,7 @@
 53793	Starlink 4728	P      O  M	US	SPXS	2022 Sep 11	-	O	305		290	?	0.2	?	2.8		9.0	?	Box + pan
 53794	Starlink 4730	P      O  M	US	SPXS	2022 Sep 11	-	O	305		290	?	0.2	?	2.8		9.0	?	Box + pan
 53795	Starlink 4742	P      O  M	US	SPXS	2022 Sep 11	-	O	305		290	?	0.2	?	2.8		9.0	?	Box + pan
-53796	Starlink 4721	P      M rM	US	SPXS	2022 Sep 11	2024 Aug 31	R	305		290	?	0.2	?	2.8		9.0	?	Box + pan
+53796	Starlink 4721	P      M rM	US	SPXS	2022 Sep 11	2025 Aug 31	R	305		290	?	0.2	?	2.8		9.0	?	Box + pan
 53797	Starlink 4723	P      O  M	US	SPXS	2022 Sep 11	-	O	305		290	?	0.2	?	2.8		9.0	?	Box + pan
 53798	Starlink 4712	P      O  M	US	SPXS	2022 Sep 11	-	O	305		290	?	0.2	?	2.8		9.0	?	Box + pan
 53799	Starlink 4710	P      O  M	US	SPXS	2022 Sep 11	-	O	305		290	?	0.2	?	2.8		9.0	?	Box + pan
@@ -27508,7 +27508,7 @@
 56912	Starlink 5805	P      O  M	US	SPXS	2023 Jun 12	-	O	305		290	?	0.2	?	2.8		9.0	?	Box + pan
 56913	Starlink 5950	P      O  M	US	SPXS	2023 Jun 12	-	O	305		290	?	0.2	?	2.8		9.0	?	Box + pan
 56914	Starlink 5961	P      O  M	US	SPXS	2023 Jun 12	-	O	305		290	?	0.2	?	2.8		9.0	?	Box + pan
-56915	Starlink 5965	P      R  M	US	SPXS	2023 Jun 12	2026 May  7 1041	R	305		290	?	0.2	?	2.8		9.0	?	Box + pan
+56915	Starlink 5965	P      O  M	US	SPXS	2023 Jun 12	-	O	305		290	?	0.2	?	2.8		9.0	?	Box + pan
 56916	Starlink 5973	P      O  M	US	SPXS	2023 Jun 12	-	O	305		290	?	0.2	?	2.8		9.0	?	Box + pan
 56917	Starlink 5971	P      O  M	US	SPXS	2023 Jun 12	-	O	305		290	?	0.2	?	2.8		9.0	?	Box + pan
 56918	Starlink 5951	P      O  M	US	SPXS	2023 Jun 12	-	O	305		290	?	0.2	?	2.8		9.0	?	Box + pan
@@ -27956,7 +27956,7 @@
 57427	CZ-2D payload adapter	C  A	CN	CNSA	2023 Jul 23	2024 Oct  2	R	50	?	50	?	0.8	?	2.5	?	2.5	?	Cyl
 57428	CZ-2D sep motor cover?	C  F	CN	CNSA	2023 Jul 23	2024 Apr 30	R	0		0		0.0		0.0		0.0		-
 57429	Zhongdian Nongchuang	P        b	CN	SXAK/ZDNC	2023 Jul 23	-	O	100	?	100	?	0.4		0.4		1.5		Box + 2 Pan
-57430	Starlink 30189	P      R  M	US	SPXS	2023 Jul 24	2025 May  1 0749	R	730		700	?	0.3	?	4.1		29.0	?	Box + pan
+57430	Starlink 30189	P      R  M	US	SPXS	2023 Jul 24	2026 May  1 0749	R	730		700	?	0.3	?	4.1		29.0	?	Box + pan
 57431	Starlink 30170	P      R  M	US	SPXS	2023 Jul 24	2025 Jun  8 0220	R	730		700	?	0.3	?	4.1		29.0	?	Box + pan
 57432	Starlink 30188	P      R  M	US	SPXS	2023 Jul 24	2026 Aug 17 2130	R	730		700	?	0.3	?	4.1		29.0	?	Box + pan
 57433	Starlink 30105	P      O rM	US	SPXS	2023 Jul 24	-	O	730		700	?	0.3	?	4.1		29.0	?	Box + pan
@@ -28824,7 +28824,7 @@
 58304	Flock 4q-29	P	US	PLAN	2023 Nov 11	2026 Oct 17	R	5.700		5.700		0.3		0.1		0.3		Box+2 pan
 58305	Flock 4q-18	P	US	PLAN	2023 Nov 11	2025 Jan 11	R	5.700		5.700		0.3		0.1		0.3		Box+2 pan
 58306	Flock 4q-22	P	US	PLAN	2023 Nov 11	2026 Sep 21	R	5.700		5.700		0.3		0.1		0.3		Box+2 pan
-58307	Flock 4q-23	P	US	PLAN	2023 Nov 11	2025 Jul 17	R	5.700		5.700		0.3		0.1		0.3		Box+2 pan
+58307	Flock 4q-23	P	US	PLAN	2023 Nov 11	2026 Jul 17?	R	5.700		5.700		0.3		0.1		0.3		Box+2 pan
 58308	Flock 4q-33	P	US	PLAN	2023 Nov 11	2026 Oct 11	R	5.700		5.700		0.3		0.1		0.3		Box+2 pan
 58309	Flock 4q-35	P	US	PLAN	2023 Nov 11	2026 Oct 16	R	5.700		5.700		0.3		0.1		0.3		Box+2 pan
 58310	Flock 4q-32	P	US	PLAN	2023 Nov 11	2025 Apr 10	R	5.700		5.700		0.3		0.1		0.3		Box+2 pan
@@ -30104,7 +30104,7 @@
 59612	Starlink 31748	P      O  M	US	SPXS	2024 Apr 28	-	O	730		700	?	0.3	?	4.1		29.0	?	Box + pan
 59613	Starlink 31746	P      O  M	US	SPXS	2024 Apr 28	-	O	730		700	?	0.3	?	4.1		29.0	?	Box + pan
 59614	Starlink 31762	P      O  M	US	SPXS	2024 Apr 28	-	O	730		700	?	0.3	?	4.1		29.0	?	Box + pan
-59615	Starlink 31761	P      R  M	US	SPXS	2024 Apr 28	2025 May  7 1041	R	730		700	?	0.3	?	4.1		29.0	?	Box + pan
+59615	Starlink 31761	P      R  M	US	SPXS	2024 Apr 28	2026 May  7 1041	R	730		700	?	0.3	?	4.1		29.0	?	Box + pan
 59616	Starlink 31768	P      O  M	US	SPXS	2024 Apr 28	-	O	730		700	?	0.3	?	4.1		29.0	?	Box + pan
 59617	Starlink 31769	P      O  M	US	SPXS	2024 Apr 28	-	O	730		700	?	0.3	?	4.1		29.0	?	Box + pan
 59618	Starlink 31784	P      O  M	US	SPXS	2024 Apr 28	-	O	730		700	?	0.3	?	4.1		29.0	?	Box + pan
@@ -30393,7 +30393,7 @@
 59904	Starlink 31924	P      O  M	US	SPXS	2024 May 28	-	O	730		700	?	0.3	?	4.1		29.0	?	Box + pan
 59905	Starlink 31898	P      O  M	US	SPXS	2024 May 28	-	O	730		700	?	0.3	?	4.1		29.0	?	Box + pan
 59906	Starlink 31861	P      O  M	US	SPXS	2024 May 28	-	O	730		700	?	0.3	?	4.1		29.0	?	Box + pan
-59907	Starlink 31920	P      R  M	US	SPXS	2024 May 28	-	O	730		700	?	0.3	?	4.1		29.0	?	Box + pan
+59907	Starlink 31920	P      R  M	US	SPXS	2024 May 28	2026 Nov 21 1812	R	730		700	?	0.3	?	4.1		29.0	?	Box + pan
 59908	EarthCARE	P	I-ESA	ESA/JAXA	2024 May 28	-	O	2200		1890		2.5		1.6		18.5		Box+dsh+pan
 59909	Tianqi Xingzuo 1-22	P	CN	GUOG	2024 May 29	-	O	40	?	40	?	0.5	?	0.3	?	0.5	?	Box
 59910	Tianqi Xingzuo 1-23	P	CN	GUOG	2024 May 29	-	O	40	?	40	?	0.5	?	0.3	?	0.5	?	Box
@@ -39976,7 +39976,7 @@
 69727	Starlink 38010	P      D  M	US	SPXS	2026 Jun 28	-	O	575		530	?	0.3	?	4.1		29.0	?	Box + pan
 69728	SXM-11	P   G	US	SIRX	2026 Jun 29	-	O	7000	?	3500	?	8.2		5.6		30.0	?	Box+2 panels
 69729	deb Starlink-34343	D  P	US	SPXS	2025 May 27	2026 Jun 26	R	0		0		0.0		0.0		0.0		-
-69730	deb Starlink-34343	D  P	US	SPXS	2025 May 27	2026 Sep?	R	0		0		0.0		0.0		0.0		-
+69730	deb Starlink-34343	D  P	US	SPXS	2025 May 27	2026 Sep  5	R	0		0		0.0		0.0		0.0		-
 69731	deb YG-25-03	D  X	CN	ZZB	2014 Dec 10	-	O	0		0		0.0		0.0		0.0		-
 69732	deb YG-25-03	D  X	CN	ZZB	2014 Dec 10	-	O	0		0		0.0		0.0		0.0		-
 69733	deb YG-25-03	D  X	CN	ZZB	2014 Dec 10	-	O	0		0		0.0		0.0		0.0		-

@@ -1,5 +1,5 @@
 #Satcat	Name	Type	State	Owner	LDate	DDate	Status	Mass	MassFlag	DryMass	DryFlag	Length	LFlag	Diameter	DFlag	Span	SpanFlag	Shape
-# Updated 2026 Nov 23 0026:10
+# Updated 2026 Nov 25 0140:01
 00005	Vanguard I	P	US	NRL	1958 Mar 17	-	O	2		2		0.1		0.1		0.1		Sphere
 00011	Vanguard II	P	US	BSC	1959 Feb 17	-	O	10		10		0.5		0.5		0.5		Sphere
 00012	Vanguard SLV-4 Stage 3	R3	US	BSC	1959 Feb 17	-	O	195		22		1.5		0.7		1.5		Cyl
@@ -8372,7 +8372,7 @@
 29430	deb DM2-39L SOZ-1	D  P	RU	KVR	1989 May 31	-	OX	0		0		0.0		0.0		0.0		-
 29432	deb DM2-39L SOZ-1	D  P	RU	KVR	1989 May 31	-	OX	0		0		0.0		0.0		0.0		-
 29439	deb DM2-39L SOZ-1	D  P	RU	KVR	1989 May 31	-	OX	0		0		0.0		0.0		0.0		-
-29441	deb DM2-39L SOZ-1	D  P	RU	KVR	1989 May 31	-	O	0		0		0.0		0.0		0.0		-
+29441	deb DM2-39L SOZ-1	D  P	RU	KVR	1989 May 31	2026 Oct 13	R	0		0		0.0		0.0		0.0		-
 29443	deb DM2-39L SOZ-1	D  P	RU	KVR	1989 May 31	-	OX	0		0		0.0		0.0		0.0		-
 29444	US-A coolant ?	D  N	RU	VMF	1981 Mar  5	-	O	0		0		0.0		0.0		0.0		-
 29445	deb CZ-3 Y2 Stage 3	D  P	CN	CNSA	1984 Apr  8	-	O	0		0		0.0		0.0		0.0		-
@@ -18275,7 +18275,7 @@
 44924	Starlink 1111	P      R+ M	US	SPXS	2020 Jan  7	2024 Jul 27 1532	R	260		248	?	0.2	?	2.8		9.0	?	Box + pan
 44925	Starlink 1112	P      R  M	US	SPXS	2020 Jan  7	2026 Mar 13 0103	R	260		248	?	0.2	?	2.8		9.0	?	Box + pan
 44926	Starlink 1113	P      R+ M	US	SPXS	2020 Jan  7	2024 Sep 21 0053?	R	260		248	?	0.2	?	2.8		9.0	?	Box + pan
-44927	Starlink 1114	P      R  M	US	SPXS	2020 Jan  7	-	O	260		248	?	0.2	?	2.8		9.0	?	Box + pan
+44927	Starlink 1114	P      R  M	US	SPXS	2020 Jan  7	2026 Nov 23 0323?	R	260		248	?	0.2	?	2.8		9.0	?	Box + pan
 44928	Starlink 1119	P      R  M	US	SPXS	2020 Jan  7	2024 May 15 0637	R	260		248	?	0.2	?	2.8		9.0	?	Box + pan
 44929	Starlink 1121	P      R  M	US	SPXS	2020 Jan  7	2024 Mar  7	R	260		248	?	0.2	?	2.8		9.0	?	Box + pan
 44930	Starlink 1123	P      R  M	US	SPXS	2020 Jan  7	-	O	260		248	?	0.2	?	2.8		9.0	?	Box + pan
@@ -18667,7 +18667,7 @@
 45414	Starlink 1309	P      R  M	US	SPXS	2020 Mar 18	2026 Oct 29 1751	R	260		248	?	0.2	?	2.8		9.0	?	Box + pan
 45415	Starlink 1316	P      L  M	US	SPXS	2020 Mar 18	-	O	260		248	?	0.2	?	2.8		9.0	?	Box + pan
 45416	Starlink 1318	P      R  M	US	SPXS	2020 Mar 18	2026 Mar  1 1638	R	260		248	?	0.2	?	2.8		9.0	?	Box + pan
-45417	Starlink 1286	P      R  M	US	SPXS	2020 Mar 18	-	O	260		248	?	0.2	?	2.8		9.0	?	Box + pan
+45417	Starlink 1286	P      R  M	US	SPXS	2020 Mar 18	2026 Nov 22 1015?	R	260		248	?	0.2	?	2.8		9.0	?	Box + pan
 45418	Starlink 1299	P      M  M	US	SPXS	2020 Mar 18	2023 Aug 24	R	260		248	?	0.2	?	2.8		9.0	?	Box + pan
 45419	Starlink 1308	P      R  M	US	SPXS	2020 Mar 18	-	O	260		248	?	0.2	?	2.8		9.0	?	Box + pan
 45424	OneWeb SL0066	P      O mM	UK	ONEWEB	2020 Mar 21	-	O	148		140	?	1.3		1.0		5.0	?	Trapezoid+2 pan
@@ -25245,7 +25245,7 @@
 54566	deb CZ-6A Y2	D  P	CN	CNSA	2022 Nov 11	-	O	0		0		0.0		0.0		0.0		-
 54567	deb CZ-6A Y2	D  P	CN	CNSA	2022 Nov 11	-	O	0		0		0.0		0.0		0.0		-
 54568	deb CZ-6A Y2	D  P	CN	CNSA	2022 Nov 11	-	O	0		0		0.0		0.0		0.0		-
-54569	deb CZ-6A Y2	D  P	CN	CNSA	2022 Nov 11	-	O	0		0		0.0		0.0		0.0		-
+54569	deb CZ-6A Y2	D  P	CN	CNSA	2022 Nov 11	2026 Nov 18	R	0		0		0.0		0.0		0.0		-
 54570	deb CZ-6A Y2	D  P	CN	CNSA	2022 Nov 11	-	O	0		0		0.0		0.0		0.0		-
 54571	deb CZ-6A Y2	D  P	CN	CNSA	2022 Nov 11	-	O	0		0		0.0		0.0		0.0		-
 54572	deb CZ-6A Y2	D  P	CN	CNSA	2022 Nov 11	2026 Mar  6	R	0		0		0.0		0.0		0.0		-
@@ -29500,7 +29500,7 @@
 58990	Insat 3DS	P	IN	ISRO	2024 Feb 17	-	O	2275		960	?	2.4		1.6		9.5		Box+2 pan
 58991	GSLV CUS-13?	R3	IN	ISRO	2024 Feb 17	-	O	2630		2630		9.9		2.8		9.9		Cyl
 58992	ADRAS-J	P	J	ASTSC	2024 Feb 18	-	O	150		120	?	1.2		0.8		3.7		Box+2 pan
-58993	Electron 44 Kick Stage	R3	NZ	RLABN	2024 Feb 18	-	O	43	?	43	?	0.4		1.2		1.2		Trunc cone
+58993	Electron 44 Kick Stage	R3	NZ	RLABN	2024 Feb 18	2026 Sep 10	R	43	?	43	?	0.4		1.2		1.2		Trunc cone
 58994	Electron 44 Stage 2	R2	NZ	RLABN	2024 Feb 18	2024 Mar  6 0215?	R	250	?	250	?	2.4		1.2		2.4		Cyl
 58995	Merah Putih 2	P   G	ID	TELK	2024 Feb 20	-	O	4000		2500	?	5.0	?	3.5	?	30.0	?	Box + 2 Pan
 58996	Falcon 9-305 Stage 2	R2	US	SPX	2024 Feb 20	-	O	4000	?	4000	?	12.6	?	3.6		12.6		Cyl

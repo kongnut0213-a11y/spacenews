@@ -1,5 +1,5 @@
 #Satcat	Name	Type	State	Owner	LDate	DDate	Status	Mass	MassFlag	DryMass	DryFlag	Length	LFlag	Diameter	DFlag	Span	SpanFlag	Shape
-# Updated 2026 Nov 25 0140:01
+# Updated 2026 Nov 26 0106:24
 00005	Vanguard I	P	US	NRL	1958 Mar 17	-	O	2		2		0.1		0.1		0.1		Sphere
 00011	Vanguard II	P	US	BSC	1959 Feb 17	-	O	10		10		0.5		0.5		0.5		Sphere
 00012	Vanguard SLV-4 Stage 3	R3	US	BSC	1959 Feb 17	-	O	195		22		1.5		0.7		1.5		Cyl
@@ -18810,10 +18810,10 @@
 45582	Starlink 1337	P      R  M	US	SPXS	2020 Apr 22	2026 Oct 12 1508	R	260		248	?	0.2	?	2.8		9.0	?	Box + pan
 45583	Starlink 1340	P      R+ M	US	SPXS	2020 Apr 22	2024 Aug  7	R	260		248	?	0.2	?	2.8		9.0	?	Box + pan
 45584	Starlink 1343	P      R  M	US	SPXS	2020 Apr 22	2023 Nov 12 0741	R	260		248	?	0.2	?	2.8		9.0	?	Box + pan
-45586	Starlink 1347	P      R  M	US	SPXS	2020 Apr 22	-	O	260		248	?	0.2	?	2.8		9.0	?	Box + pan
+45586	Starlink 1347	P      R  M	US	SPXS	2020 Apr 22	2026 Nov 25 0314	R	260		248	?	0.2	?	2.8		9.0	?	Box + pan
 45587	Starlink 1349	P      R  M	US	SPXS	2020 Apr 22	2025 Sep 18 1800?	R	260		248	?	0.2	?	2.8		9.0	?	Box + pan
 45588	Starlink 1360	P      R  M	US	SPXS	2020 Apr 22	2025 Dec 31 1003	R	260		248	?	0.2	?	2.8		9.0	?	Box + pan
-45589	Starlink 1364	P      R  M	US	SPXS	2020 Apr 22	-	O	260		248	?	0.2	?	2.8		9.0	?	Box + pan
+45589	Starlink 1364	P      R  M	US	SPXS	2020 Apr 22	2026 Nov 24 1530?	R	260		248	?	0.2	?	2.8		9.0	?	Box + pan
 45590	Starlink 1365	P      R  M	US	SPXS	2020 Apr 22	-	O	260		248	?	0.2	?	2.8		9.0	?	Box + pan
 45602	Xingyun-2 01 xing	P	CN	XYUN	2020 May 12	-	O	93		85	?	0.5		0.5		0.5		Box
 45603	Xingyun-2 02 xing	P	CN	XYUN	2020 May 12	-	O	93		85	?	0.5		0.5		0.5		Box
@@ -18866,7 +18866,7 @@
 45670	Starlink 1453	P      R  M	US	SPXS	2020 Jun  4	2026 Oct  1 0348	R	260		248	?	0.2	?	2.8		9.0	?	Box + pan
 45671	Starlink 1454	P      R  M	US	SPXS	2020 Jun  4	2026 Oct 25 0318	R	260		248	?	0.2	?	2.8		9.0	?	Box + pan
 45672	Starlink 1455	P      R  M	US	SPXS	2020 Jun  4	2024 Oct  4 2312	R	260		248	?	0.2	?	2.8		9.0	?	Box + pan
-45673	Starlink 1456	P      R  M	US	SPXS	2020 Jun  4	-	O	260		248	?	0.2	?	2.8		9.0	?	Box + pan
+45673	Starlink 1456	P      R  M	US	SPXS	2020 Jun  4	2026 Nov 24	R	260		248	?	0.2	?	2.8		9.0	?	Box + pan
 45674	Starlink 1457	P      R  M	US	SPXS	2020 Jun  4	2026 May 21	R	260		248	?	0.2	?	2.8		9.0	?	Box + pan
 45675	Starlink 1458	P      R  M	US	SPXS	2020 Jun  4	-	O	260		248	?	0.2	?	2.8		9.0	?	Box + pan
 45676	Starlink 1460	P      L  M	US	SPXS	2020 Jun  4	-	O	260		248	?	0.2	?	2.8		9.0	?	Box + pan
@@ -24745,7 +24745,7 @@
 54036	CZ-2C sep motor cover	C  F	CN	CASC	2022 Oct 12	2023 Jan 14	R	0		0		0.0		0.0		0.0		-
 54037	CZ-2C sep motor cover	C  F	CN	CASC	2022 Oct 12	2024 Apr 14	R	0		0		0.0		0.0		0.0		-
 54038	CZ-2C sep motor cover	C  F	CN	CASC	2022 Oct 12	2023 Apr 19	R	0		0		0.0		0.0		0.0		-
-54039	CZ-2C Y66 Stage 2	R2	CN	CASC	2022 Oct 12	-	O	3800	?	3800	?	8.4		3.3		8.4		Cyl
+54039	CZ-2C Y66 Stage 2	R2	CN	CASC	2022 Oct 12	2026 Nov 25 0042	R	3800	?	3800	?	8.4		3.3		8.4		Cyl
 54040	CZ-2C sep motor cover	C  F	CN	CASC	2022 Oct 12	2023 Jun  3	R	0		0		0.0		0.0		0.0		-
 54041	deb CZ-2C?	C  F	CN	CASC	2022 Oct 12	2024 Jan  3	R	0		0		0.0		0.0		0.0		-
 54042	Yaogan 36 02 zu 01 xing	P	CN	ZZB	2022 Oct 14	-	O	300	?	300	?	2.5	?	2.5		5.0	?	Box + 2 Pan
@@ -33032,7 +33032,7 @@
 62612	GESAT Gen1	P	F	ABSEN/NANAV	2025 Jan 14	-	O	30		30		0.4		0.2		1.0		Box+ 2 pan
 62613	Flock 4g-8	P      O	US	PLAN	2025 Jan 14	-	O	5.700		5.700		0.3		0.1		0.3		Box+2 pan
 62616	InnoCube	P	D	TUB	2025 Jan 14	-	O	4	?	4	?	0.3		0.1		0.3		Box
-62617	SCOT-Digantara	P	IN	DIGAN/ORBAS	2025 Jan 14	-	O	10	?	10	?	0.3		0.2		0.3		Box+2 pan
+62617	SCOT-Digantara	P	IN	DIGAN/ORBAS	2025 Jan 14	2026 Nov 22	R	10	?	10	?	0.3		0.2		0.3		Box+2 pan
 62618	AE1d	P	J	ARKE	2025 Jan 14	2026 Sep 24	R	10	?	10	?	0.3		0.2		0.3		Box+ 2 pan
 62619	IRIS-F3	P	TW	NCKU	2025 Jan 14	-	O	4		4		0.3		0.1		0.3		Box
 62621	Flock 4g-13	P      O	US	PLAN	2025 Jan 14	-	O	5.700		5.700		0.3		0.1		0.3		Box+2 pan

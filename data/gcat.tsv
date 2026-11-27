@@ -1,5 +1,5 @@
 #Satcat	Name	Type	State	Owner	LDate	DDate	Status	Mass	MassFlag	DryMass	DryFlag	Length	LFlag	Diameter	DFlag	Span	SpanFlag	Shape
-# Updated 2026 Nov 26 0106:24
+# Updated 2026 Nov 27 0130:46
 00005	Vanguard I	P	US	NRL	1958 Mar 17	-	O	2		2		0.1		0.1		0.1		Sphere
 00011	Vanguard II	P	US	BSC	1959 Feb 17	-	O	10		10		0.5		0.5		0.5		Sphere
 00012	Vanguard SLV-4 Stage 3	R3	US	BSC	1959 Feb 17	-	O	195		22		1.5		0.7		1.5		Cyl
@@ -18515,7 +18515,7 @@
 45234	Starlink 1243	P      R+ M	US	SPXS	2020 Feb 17	2024 Aug 31 2351	R	260		248	?	0.2	?	2.8		9.0	?	Box + pan
 45235	Starlink 1246	P      L  M	US	SPXS	2020 Feb 17	-	O	260		248	?	0.2	?	2.8		9.0	?	Box + pan
 45236	Starlink 1247	P      R  M	US	SPXS	2020 Feb 17	2025 Oct  8 0446	R	260		248	?	0.2	?	2.8		9.0	?	Box + pan
-45237	Starlink 1270	P      R  M	US	SPXS	2020 Feb 17	-	O	260		248	?	0.2	?	2.8		9.0	?	Box + pan
+45237	Starlink 1270	P      R  M	US	SPXS	2020 Feb 17	2026 Nov 25 2324	R	260		248	?	0.2	?	2.8		9.0	?	Box + pan
 45243	deb DM2-115L SOZ-1?	D  P	RU	VVKOV	2009 Dec 14	2025 May  8	R	0		0		0.0		0.0		0.0		-
 45245	JCSAT 17	P   G	J	SKPJ	2020 Feb 18	-	O	5857		3000	?	5.0	?	2.5	?	25.0	?	Box + 2 pan+ dish
 45246	Cheollian 2B	P   G	KR	KARI	2020 Feb 18	-	O	3379		2500	?	3.8		2.4		8.9		Box + panel
@@ -18792,18 +18792,18 @@
 45564	Starlink 1356	P      R  M	US	SPXS	2020 Apr 22	-	O	260		248	?	0.2	?	2.8		9.0	?	Box + pan
 45565	Starlink 1357	P      R  M	US	SPXS	2020 Apr 22	2026 Nov 16 0119	R	260		248	?	0.2	?	2.8		9.0	?	Box + pan
 45566	Starlink 1358	P      R  M	US	SPXS	2020 Apr 22	2025 May 13 0452?	R	260		248	?	0.2	?	2.8		9.0	?	Box + pan
-45567	Starlink 1361	P      R  M	US	SPXS	2020 Apr 22	-	O	260		248	?	0.2	?	2.8		9.0	?	Box + pan
+45567	Starlink 1361	P      R  M	US	SPXS	2020 Apr 22	2026 Nov 25 2300?	R	260		248	?	0.2	?	2.8		9.0	?	Box + pan
 45568	Starlink 1363	P      R  M	US	SPXS	2020 Apr 22	2026 Jun  1 2018	R	260		248	?	0.2	?	2.8		9.0	?	Box + pan
 45569	Starlink 1366	P      R  M	US	SPXS	2020 Apr 22	2026 Jun  9 1628	R	260		248	?	0.2	?	2.8		9.0	?	Box + pan
 45570	Starlink 1376	P      L  M	US	SPXS	2020 Apr 22	-	O	260		248	?	0.2	?	2.8		9.0	?	Box + pan
 45571	Starlink 1261	P      R  M	US	SPXS	2020 Apr 22	2024 Jan 12 1007	R	260		248	?	0.2	?	2.8		9.0	?	Box + pan
 45572	Starlink 1320	P      M  M	US	SPXS	2020 Apr 22	2026 Aug  2 0330?	R	260		248	?	0.2	?	2.8		9.0	?	Box + pan
-45573	Starlink 1321	P      R  M	US	SPXS	2020 Apr 22	-	O	260		248	?	0.2	?	2.8		9.0	?	Box + pan
+45573	Starlink 1321	P      R  M	US	SPXS	2020 Apr 22	2026 Nov 26 0716	R	260		248	?	0.2	?	2.8		9.0	?	Box + pan
 45574	Starlink 1324	P      R+ M	US	SPXS	2020 Apr 22	2024 Jul 20 1931	R	260		248	?	0.2	?	2.8		9.0	?	Box + pan
 45575	Starlink 1326	P      M bM	US	SPXS	2020 Apr 22	2023 Jun  3 1221	R	260		248	?	0.2	?	2.8		9.0	?	Box + pan
 45576	Starlink 1328	P      R  M	US	SPXS	2020 Apr 22	2026 Jan 15 0659	R	260		248	?	0.2	?	2.8		9.0	?	Box + pan
 45577	Starlink 1330	P      M*bM	US	SPXS	2020 Apr 22	2023 Nov 21 1823	R	260		248	?	0.2	?	2.8		9.0	?	Box + pan
-45578	Starlink 1331	P      R  M	US	SPXS	2020 Apr 22	-	O	260		248	?	0.2	?	2.8		9.0	?	Box + pan
+45578	Starlink 1331	P      R  M	US	SPXS	2020 Apr 22	2026 Nov 26 1659	R	260		248	?	0.2	?	2.8		9.0	?	Box + pan
 45579	Starlink 1332	P      R  M	US	SPXS	2020 Apr 22	2025 May  6 0100	R	260		248	?	0.2	?	2.8		9.0	?	Box + pan
 45580	Starlink 1333	P      L  M	US	SPXS	2020 Apr 22	-	O	260		248	?	0.2	?	2.8		9.0	?	Box + pan
 45581	Starlink 1335	P      L  M	US	SPXS	2020 Apr 22	-	O	260		248	?	0.2	?	2.8		9.0	?	Box + pan
@@ -19235,7 +19235,7 @@
 46137	Starlink 1586	P      R  M	US	SPXS	2020 Aug 18	2025 Sep 26 0248?	R	260		248	?	0.2	?	2.8		9.0	?	Box + pan
 46138	Starlink 1590	P      M+ M	US	SPXS	2020 Aug 18	2025 Apr  4 0600?	R	260		248	?	0.2	?	2.8		9.0	?	Box + pan
 46140	Starlink 1594	P      R  M	US	SPXS	2020 Aug 18	2025 Feb  4 2331	R	260		248	?	0.2	?	2.8		9.0	?	Box + pan
-46141	Starlink 1596	P      R  M	US	SPXS	2020 Aug 18	-	O	260		248	?	0.2	?	2.8		9.0	?	Box + pan
+46141	Starlink 1596	P      M  M	US	SPXS	2020 Aug 18	2026 Nov 25	R	260		248	?	0.2	?	2.8		9.0	?	Box + pan
 46142	Starlink 1597	P      R  M	US	SPXS	2020 Aug 18	2026 Aug 24 1930?	R	260		248	?	0.2	?	2.8		9.0	?	Box + pan
 46144	Starlink 1606	P      R  M	US	SPXS	2020 Aug 18	2026 Jun 27 1713?	R	260		248	?	0.2	?	2.8		9.0	?	Box + pan
 46146	Starlink 1608	P      L  M	US	SPXS	2020 Aug 18	-	O	260		248	?	0.2	?	2.8		9.0	?	Box + pan
@@ -33155,7 +33155,7 @@
 62753	Starlink 32751	P      O  M	US	SPXS	2025 Jan 21	-	O	730		700	?	0.3	?	4.1		29.0	?	Box + pan
 62754	Starlink 32740	P      O  M	US	SPXS	2025 Jan 21	-	O	730		700	?	0.3	?	4.1		29.0	?	Box + pan
 62755	Starlink 32745	P      O  M	US	SPXS	2025 Jan 21	-	O	730		700	?	0.3	?	4.1		29.0	?	Box + pan
-62756	USA 485	P      D cM	US	NROC	2025 Jan 21	-	O	800		750	?	0.3	?	4.1		29.0	?	Box + pan
+62756	USA 485	P      D cM	US	NROC	2025 Jan 21	2026 Nov 25 1503	R	800		750	?	0.3	?	4.1		29.0	?	Box + pan
 62757	USA 486	P      D cM	US	NROC	2025 Jan 21	-	O	800		750	?	0.3	?	4.1		29.0	?	Box + pan
 62758	Starlink 33596	P      O  M	US	SPXS	2025 Jan 21	-	O	575		530	?	0.3	?	4.1		29.0	?	Box + pan
 62759	Starlink 33589	P      O  M	US	SPXS	2025 Jan 21	-	O	575		530	?	0.3	?	4.1		29.0	?	Box + pan

@@ -1,5 +1,5 @@
 #Satcat	Name	Type	State	Owner	LDate	DDate	Status	Mass	MassFlag	DryMass	DryFlag	Length	LFlag	Diameter	DFlag	Span	SpanFlag	Shape
-# Updated 2026 Nov 27 0130:46
+# Updated 2026 Nov 28 0039:29
 00005	Vanguard I	P	US	NRL	1958 Mar 17	-	O	2		2		0.1		0.1		0.1		Sphere
 00011	Vanguard II	P	US	BSC	1959 Feb 17	-	O	10		10		0.5		0.5		0.5		Sphere
 00012	Vanguard SLV-4 Stage 3	R3	US	BSC	1959 Feb 17	-	O	195		22		1.5		0.7		1.5		Cyl
@@ -18408,7 +18408,7 @@
 45096	Starlink 1152	P      M  M	US	SPXS	2020 Jan 29	-	O	260		248	?	0.2	?	2.8		9.0	?	Box + pan
 45098	Starlink 1184	P      L  M	US	SPXS	2020 Jan 29	-	O	260		248	?	0.2	?	2.8		9.0	?	Box + pan
 45099	Starlink 1186	P      R  M	US	SPXS	2020 Jan 29	2025 Feb 13 0005?	R	260		248	?	0.2	?	2.8		9.0	?	Box + pan
-45100	Starlink 1193	P      R  M	US	SPXS	2020 Jan 29	-	O	260		248	?	0.2	?	2.8		9.0	?	Box + pan
+45100	Starlink 1193	P      R  M	US	SPXS	2020 Jan 29	2026 Nov 26 1800?	R	260		248	?	0.2	?	2.8		9.0	?	Box + pan
 45101	Starlink 1194	P      R+ M	US	SPXS	2020 Jan 29	2024 Jul 29 2329	R	260		248	?	0.2	?	2.8		9.0	?	Box + pan
 45102	Starlink 1195	P      R  M	US	SPXS	2020 Jan 29	2024 Feb 14 2350?	R	260		248	?	0.2	?	2.8		9.0	?	Box + pan
 45103	Starlink 1196	P      M+ M	US	SPXS	2020 Jan 29	2024 Aug 25 1816	R	260		248	?	0.2	?	2.8		9.0	?	Box + pan
@@ -24045,7 +24045,7 @@
 53205	Starlink 4397	P      L  M	US	SPXS	2022 Jul 22	-	O	297		275	?	0.2	?	2.8		9.0	?	Box + pan
 53206	Starlink 4408	P      R  M	US	SPXS	2022 Jul 22	2026 Oct  6 1921	R	297		275	?	0.2	?	2.8		9.0	?	Box + pan
 53207	Starlink 4413	P      L  M	US	SPXS	2022 Jul 22	-	O	297		275	?	0.2	?	2.8		9.0	?	Box + pan
-53208	Starlink 4425	P      L  M	US	SPXS	2022 Jul 22	-	O	297		275	?	0.2	?	2.8		9.0	?	Box + pan
+53208	Starlink 4425	P      R  M	US	SPXS	2022 Jul 22	2026 Nov 27 0410	R	297		275	?	0.2	?	2.8		9.0	?	Box + pan
 53209	Starlink 4423	P      L  M	US	SPXS	2022 Jul 22	-	O	297		275	?	0.2	?	2.8		9.0	?	Box + pan
 53210	Starlink 4427	P      L  M	US	SPXS	2022 Jul 22	-	O	297		275	?	0.2	?	2.8		9.0	?	Box + pan
 53211	Starlink 4419	P      R  M	US	SPXS	2022 Jul 22	2025 Jun  4 0000?	R	297		275	?	0.2	?	2.8		9.0	?	Box + pan
